@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Nosotros | ADYRON</title>
+    <meta name="description" content="Conoce a ADYRON, agencia digital en Ecuador especializada en desarrollo web, branding y estrategias de crecimiento para marcas modernas.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" type="image/png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Orbitron:wght@500;700;900&family=Poppins:wght@400;500;600&family=Rajdhani:wght@500;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración inyectada en index.html o compartida -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { background-color: #020202; color: #ffffff; overflow-x: hidden; }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="main-header" class="fixed w-full z-50 top-0 transition-all duration-300 border-b border-transparent">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="relative w-14 h-14 flex items-center justify-center group">
+                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
+                <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40" height="40" class="w-10 h-10 object-contain p-0.5">
+                </div>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
+                <a href="servicios.html" class="hover:text-white transition-colors">Servicios</a>
+                <a href="portafolio.html" class="hover:text-white transition-colors">Portafolio</a>
+                <a href="planes.html" class="hover:text-white transition-colors">Planes</a>
+                <a href="nosotros.html" class="text-white">Nosotros</a>
+                <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
+                <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all">Contacto</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50" aria-label="Abrir menú">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
+            <a href="index.html" class="text-lg font-medium text-white">Inicio</a>
+            <a href="servicios.html" class="text-lg font-medium text-gray-300">Servicios</a>
+            <a href="portafolio.html" class="text-lg font-medium text-gray-300">Portafolio</a>
+            <a href="planes.html" class="text-lg font-medium text-gray-300">Planes</a>
+            <a href="nosotros.html" class="text-lg font-medium text-white">Nosotros</a>
+            <a href="blog.html" class="text-lg font-medium text-gray-300">Blog</a>
+            <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        
+        <!-- 1. Intro Text Section -->
+        <section class="container mx-auto px-6 mb-20 text-center reveal">
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-8 uppercase tracking-tight">
+                CONOCE NUESTRA <span class="text-brand-blue">EMPRESA</span>
+            </h1>
+            <div class="max-w-4xl mx-auto text-gray-300 text-lg md:text-xl leading-relaxed space-y-6 font-light">
+                <p>
+                    “Hola, somos <strong class="text-white font-bold">ADYRON</strong>. Nos especializamos en transformar marcas mediante estrategias digitales inteligentes, diseño premium y contenido que realmente conecta con tu público.
+                </p>
+                <p>
+                    Creamos y gestionamos tus redes sociales de forma profesional, construimos webs modernas que convierten y te entregamos un sistema completo para que tu negocio crezca de manera inteligente.
+                </p>
+                <p class="font-heading font-bold text-white text-2xl mt-8">
+                    Tú solo vendes. Nosotros nos encargamos del resto.”
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Banner Map Section -->
+        <section class="w-full mb-20 reveal delay-100">
+            <div id="adyron-safe-zone">
+                <style>
+                    /* 1. WRAPPER DE SEGURIDAD */
+                    #adyron-safe-zone {
+                        width: 100%;
+                        max-width: 100vw;
+                        overflow-x: hidden;
+                        position: relative;
+                        margin: 0;
+                        padding: 0;
+                        background: transparent;
+                    }
+                    #adyron-safe-zone * { box-sizing: border-box; }
+                    .banner-container {
+                        position: relative;
+                        width: 100%;
+                        height: 600px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-end;
+                        padding-bottom: 50px;
+                        overflow: hidden;
+                    }
+                    .banner-bg-image {
+                        position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+                        background-image: url('https://i.ibb.co/v4Dx92Pf/concepto-de-conservacion-ambiental-globalizacion-global-mapa-del-mundo.jpg');
+                        background-size: cover; background-position: center;
+                        opacity: 0.15; filter: grayscale(100%) sepia(100%) hue-rotate(190deg) saturate(300%);
+                        z-index: 0;
+                    }
+                    #network-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+                    .city-node {
+                        position: absolute; width: 30px; height: 30px; z-index: 2; transform: translate(-50%, -50%);
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230055ff'%3E%3Cpath d='M7 2v18h10V2H7zm2 2h2v2H9V4zm4 0h2v2h-2V4zm-4 4h2v2H9V8zm4 0h2v2h-2V8zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2zm-4 4h2v2H9v-2zm4 0h2v2h-2v-2z'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat; background-position: center bottom; background-size: contain;
+                        filter: drop-shadow(0 0 5px rgba(0, 85, 255, 0.8));
+                    }
+                    .city-node::after {
+                        content: ''; position: absolute; width: 100%; height: 100%; border-radius: 50%;
+                        border: 1px solid rgba(0, 85, 255, 0.6); animation: radar-pulse 2s infinite;
+                    }
+                    @keyframes radar-pulse { 0% { transform: scale(0.8); opacity: 1; } 100% { transform: scale(2.5); opacity: 0; } }
+                    .node-ny { top: 32%; left: 26%; } .node-london { top: 28%; left: 48%; } .node-dubai { top: 42%; left: 62%; }
+                    .node-tokyo { top: 35%; left: 85%; } .node-singapore { top: 55%; left: 80%; } .node-sydney { top: 80%; left: 88%; } .node-sao-paulo { top: 70%; left: 32%; }
+                    .content-wrapper {
+                        position: relative; z-index: 10; text-align: center; width: 90%; height: 150px;
+                        display: flex; flex-direction: column; justify-content: center; align-items: center;
+                    }
+                    .main-title {
+                        font-family: 'Montserrat', sans-serif; font-size: 2.5rem; font-weight: 900; text-transform: uppercase;
+                        color: #0044cc; margin: 0; letter-spacing: 2px; position: absolute; transition: all 0.5s ease;
+                        text-shadow: 0 0 10px rgba(0, 153, 255, 0.3); width: 100%;
+                    }
+                    .main-title.exploding { animation: data-explode 0.8s forwards ease-out; }
+                    @keyframes data-explode {
+                        0% { transform: scale(1); opacity: 1; filter: blur(0); }
+                        50% { color: #00aaff; letter-spacing: 5px; } 
+                        100% { transform: scale(2); opacity: 0; letter-spacing: 15px; filter: blur(10px); }
+                    }
+                    .main-title.hidden { opacity: 0; transform: scale(0.5); }
+                    .cta-button {
+                        display: inline-block; padding: 15px 40px; background: #0055ff; color: white; text-decoration: none;
+                        font-weight: 700; font-size: 1.2rem; border-radius: 5px; box-shadow: 0 0 20px rgba(0, 85, 255, 0.4);
+                        opacity: 0; transform: translateY(20px); pointer-events: none; transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                    .cta-button:hover { background: #0033aa; box-shadow: 0 0 30px rgba(0, 85, 255, 0.8); }
+                    .cta-button.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+                    @media (max-width: 768px) {
+                        .banner-container { height: 500px; }
+                        .main-title { font-size: 1.6rem; letter-spacing: 1px; line-height: 1.2; }
+                        .city-node { width: 25px; height: 25px; }
+                        .node-tokyo { left: 88%; } .node-sydney { top: 78%; left: 85%; }
+                        .cta-button { padding: 12px 30px; font-size: 1rem; }
+                    }
+                    /* Tooltip Styles */
+                    .city-tooltip {
+                        position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%) translateY(10px);
+                        background: rgba(2, 6, 23, 0.9); border: 1px solid #0036FF; color: #fff;
+                        padding: 8px 12px; border-radius: 8px; font-size: 0.75rem; white-space: nowrap;
+                        opacity: 0; visibility: hidden; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+                        pointer-events: none; backdrop-filter: blur(8px); box-shadow: 0 0 20px rgba(0, 54, 255, 0.4);
+                        z-index: 100; text-align: center; min-width: 120px;
+                    }
+                    .city-node:hover .city-tooltip { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+                    .city-tooltip strong { display: block; color: #00f7ff; font-family: 'Orbitron', sans-serif; margin-bottom: 2px; font-size: 0.8rem; }
+                    .city-tooltip span { color: #94a3b8; font-family: 'Inter', sans-serif; }
+                    /* Cursor pointer for nodes */
+                    .city-node { cursor: pointer; }
+                </style>
+
+                <div class="banner-container" id="banner-box">
+                    <div class="banner-bg-image"></div>
+                    <canvas id="network-canvas"></canvas>
+                    <div class="city-node node-ny">
+                        <div class="city-tooltip"><strong>New York</strong><span>Clientes Corporativos</span></div>
+                    </div>
+                    <div class="city-node node-london">
+                        <div class="city-tooltip"><strong>Londres</strong><span>Partners Estratégicos</span></div>
+                    </div>
+                    <div class="city-node node-dubai">
+                        <div class="city-tooltip"><strong>Dubai</strong><span>Innovación Tech</span></div>
+                    </div>
+                    <div class="city-node node-tokyo">
+                        <div class="city-tooltip"><strong>Tokyo</strong><span>Servidores Asia</span></div>
+                    </div>
+                    <div class="city-node node-singapore">
+                        <div class="city-tooltip"><strong>Singapur</strong><span>Hub Digital</span></div>
+                    </div>
+                    <div class="city-node node-sydney">
+                        <div class="city-tooltip"><strong>Sydney</strong><span>Expansión 2026</span></div>
+                    </div>
+                    <div class="city-node node-sao-paulo">
+                        <div class="city-tooltip"><strong>São Paulo</strong><span>Sede Latam</span></div>
+                    </div>
+                    <div class="content-wrapper">
+                        <h2 class="main-title" id="anim-text">YO QUIERO MI WEB PARA CONECTAR</h2>
+                        <a href="https://api.whatsapp.com/send/?phone=593960761791&text=Hola%2C%20quiero%20conectar%20mi%20negocio%20con%20una%20web." class="cta-button" target="_blank" rel="noopener noreferrer" id="anim-btn">CONECTAR AHORA</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Mission & Vision Section -->
+        <section class="container mx-auto px-6 mb-20 reveal delay-200">
+            <div id="adyron-safe-wrapper">
+                <style>
+                    #adyron-safe-wrapper * { box-sizing: border-box !important; }
+                    #adyron-safe-wrapper { width: 100%; max-width: 100vw; overflow-x: hidden; padding: 10px 0; background: transparent; position: relative; }
+                    .adyron-container { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 20px; width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+                    .adyron-card {
+                        flex: 1; min-width: 300px; position: relative; background: rgba(255, 255, 255, 0.95);
+                        border: 1px solid #d1d1d1; padding: 30px 25px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; border-radius: 4px;
+                    }
+                    .adyron-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0, 243, 255, 0.15); border-color: #333; }
+                    .tech-corner { position: absolute; width: 20px; height: 20px; transition: all 0.3s ease; }
+                    .tl { top: 0; left: 0; border-top: 3px solid #ff00ff; border-left: 3px solid #ff00ff; }
+                    .br { bottom: 0; right: 0; border-bottom: 3px solid #00f3ff; border-right: 3px solid #00f3ff; }
+                    .adyron-heading {
+                        font-family: 'Orbitron', sans-serif; font-size: 1.8rem; color: #1a1a1a; margin: 0 0 15px 0;
+                        text-transform: uppercase; letter-spacing: 1px; position: relative; display: inline-block; line-height: 1.2;
+                    }
+                    .adyron-heading::after {
+                        content: ''; position: absolute; bottom: -5px; left: 0; width: 40px; height: 3px;
+                        background: linear-gradient(90deg, #ff00ff, #00f3ff); transition: width 0.4s ease;
+                    }
+                    .adyron-card:hover .adyron-heading::after { width: 100%; }
+                    .adyron-text { font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; line-height: 1.5; color: #444; margin: 0; font-weight: 600; text-align: left; }
+                    @keyframes glitch-anim {
+                        0% { transform: translate(0); } 20% { transform: translate(-1px, 1px); } 40% { transform: translate(-1px, -1px); }
+                        60% { transform: translate(1px, 1px); } 80% { transform: translate(1px, -1px); } 100% { transform: translate(0); }
+                    }
+                    .adyron-card:hover .adyron-heading { animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite; }
+                    @media (max-width: 768px) {
+                        #adyron-safe-wrapper { padding: 5px 0; }
+                        .adyron-container { flex-direction: column; padding: 0 10px; gap: 15px; }
+                        .adyron-card { min-width: 0; width: 100%; margin: 0; }
+                        .adyron-heading { font-size: 1.4rem; } .adyron-text { font-size: 1rem; }
+                    }
+                </style>
+
+                <div class="adyron-container">
+                    <div class="adyron-card">
+                        <div class="tech-corner tl"></div> 
+                        <h2 class="adyron-heading">Nuestra Misión</h2>
+                        <p class="adyron-text">
+                            Digitalizar y potenciar negocios a través de estrategias creativas, diseño premium y sistemas que generen resultados reales.
+                        </p>
+                        <div class="tech-corner br"></div> 
+                    </div>
+
+                    <div class="adyron-card">
+                        <div class="tech-corner tl"></div> 
+                        <h2 class="adyron-heading">Nuestra Visión</h2>
+                        <p class="adyron-text">
+                            Convertir a ADYRON en una agencia referente a nivel de Ecuador en gestión de redes sociales y desarrollo digital.
+                        </p>
+                        <div class="tech-corner br"></div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Partners Title Section -->
+        <section class="container mx-auto px-6 reveal delay-300">
+            <style>
+                .tech-pro-header { text-align: center; padding: 60px 20px; position: relative; z-index: 2; font-family: 'Poppins', sans-serif; }
+                .system-status-bar {
+                    display: inline-flex; align-items: center; gap: 10px; background: rgba(0, 0, 0, 0.85);
+                    border: 1px solid #333; border-left: 4px solid #0036FF; padding: 8px 20px; border-radius: 4px;
+                    margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); backdrop-filter: blur(5px);
+                }
+                .system-text { font-family: 'Fira Code', monospace; font-size: 0.85rem; color: #BFC3C9; text-transform: uppercase; letter-spacing: 1px; }
+                .status-dot { width: 8px; height: 8px; background-color: #0036FF; border-radius: 50%; box-shadow: 0 0 8px #0036FF; animation: pulseDot 2s infinite; }
+                .tech-title-main {
+                    font-size: 3rem; font-weight: 800; color: #FFFFFF; line-height: 1.1; text-transform: uppercase;
+                    margin: 0; letter-spacing: -1px; text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+                }
+                .tech-highlight { color: #0036FF; position: relative; display: inline-block; }
+                .tech-highlight::after {
+                    content: ""; position: absolute; bottom: 5px; left: 0; width: 100%; height: 8px;
+                    background: rgba(0, 54, 255, 0.2); z-index: -1; transform: skewX(-20deg);
+                }
+                .tech-decororator { display: flex; align-items: center; justify-content: center; gap: 5px; margin-top: 25px; opacity: 0.7; }
+                .line { height: 2px; width: 60px; background: linear-gradient(90deg, transparent, #BFC3C9); }
+                .line.reverse { background: linear-gradient(90deg, #BFC3C9, transparent); }
+                .square { width: 6px; height: 6px; background-color: #0036FF; transform: rotate(45deg); }
+                @keyframes pulseDot { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } 100% { opacity: 1; transform: scale(1); } }
+                @media (max-width: 768px) { .tech-title-main { font-size: 2rem; } .system-text { font-size: 0.7rem; } .system-status-bar { padding: 6px 12px; border-left-width: 3px; } }
+            </style>
+
+            <div class="tech-pro-header">
+                <div class="system-status-bar">
+                    <div class="status-dot"></div>
+                    <span class="system-text">Empresa enfocada en Servicio al cliente</span>
+                </div>
+                <h3 class="tech-title-main">
+                    Socios que han confiado <br>
+                    en nuestro <span class="tech-highlight">Trabajo</span>
+                </h3>
+                <div class="tech-decororator">
+                    <div class="line"></div><div class="square"></div><div class="square"></div><div class="square"></div><div class="line reverse"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Holo Logos Section -->
+        <section class="container mx-auto px-6 mb-20 reveal delay-400">
+            <div id="adyron-logo-stage">
+                <style>
+                    #adyron-logo-stage {
+                        width: 100%; max-width: 100vw; overflow: hidden; padding: 40px 0;
+                        display: flex; justify-content: center; align-items: center; background: transparent; perspective: 1000px;
+                    }
+                    .holo-frame {
+                        position: relative; width: 300px; height: 300px; background: rgba(255, 255, 255, 0.03);
+                        backdrop-filter: blur(15px) saturate(120%); -webkit-backdrop-filter: blur(15px);
+                        border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+                        display: flex; justify-content: center; align-items: center; overflow: hidden;
+                    }
+                    .energy-border {
+                        position: absolute; top: -3px; left: -3px; right: -3px; bottom: -3px; border-radius: 22px;
+                        background: linear-gradient(45deg, #00f3ff, transparent, #ff00ff, transparent); background-size: 400% 400%;
+                        z-index: -1; animation: border-flow 3s ease infinite; opacity: 0.8; filter: blur(5px);
+                    }
+                    @keyframes border-flow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+                    .holo-img {
+                        position: absolute; width: 100%; height: 100%; object-fit: cover; opacity: 0;
+                        transition: opacity 0.5s ease; z-index: 1; filter: brightness(0.9) contrast(1.1);
+                    }
+                    .holo-img.active { opacity: 1; z-index: 2; }
+                    .scan-line {
+                        position: absolute; top: -20%; left: 0; width: 100%; height: 20%;
+                        background: linear-gradient(to bottom, transparent, rgba(0, 243, 255, 0.8), transparent);
+                        z-index: 10; opacity: 0; pointer-events: none;
+                    }
+                    .holo-frame.scanning .scan-line { animation: scan-down 1.5s cubic-bezier(0.45, 0, 0.55, 1) forwards; }
+                    @keyframes scan-down { 0% { top: -20%; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 120%; opacity: 0; } }
+                    .holo-img.glitching { animation: glitch-effect 0.5s steps(5) infinite; }
+                    @keyframes glitch-effect {
+                        0% { transform: translate(0); } 20% { transform: translate(-2px, 2px); filter: hue-rotate(90deg); }
+                        40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); filter: hue-rotate(-90deg); }
+                        80% { transform: translate(2px, -2px); } 100% { transform: translate(0); }
+                    }
+                    @media (max-width: 768px) { .holo-frame { width: 260px; height: 260px; } }
+                    @media (min-width: 769px) and (max-width: 1024px) { .holo-frame { width: 350px; height: 350px; } }
+                    @media (min-width: 1025px) { .holo-frame { width: 400px; height: 400px; } }
+                </style>
+
+                <div class="holo-frame" id="holoContainer">
+                    <div class="energy-border"></div>
+                    <div class="scan-line"></div>
+                    <img src="https://i.ibb.co/SFB6LwF/5.jpg" alt="Logo 1" width="400" height="400" loading="lazy" class="holo-img active" id="img1">
+                    <img src="https://i.ibb.co/FbJBVCZ0/18.jpg" alt="Logo 2" width="400" height="400" loading="lazy" class="holo-img" id="img2">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]"></div>
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="relative w-20 h-20 flex items-center justify-center group mb-6">
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
+                        <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
+                        </div>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Transformamos ideas complejas en productos digitales simples.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Enlaces</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html" class="hover:text-brand-blue transition-colors">Inicio</a></li>
+                        <li><a href="servicios.html" class="hover:text-brand-blue transition-colors">Servicios</a></li>
+                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a></li>
+                        <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment -->
+                <div>
+                    <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Pagos</h4>
+                    <p class="text-gray-400 text-sm mb-2">Paga en CÓMODAS CUOTAS</p>
+                    <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
+                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16" loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24" loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Contacto</h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li>
+                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                                    <i data-lucide="phone" class="w-4 h-4"></i>
+                                </div>
+                                <span>+593 960 761 791</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                                    <i data-lucide="mail" class="w-4 h-4"></i>
+                                </div>
+                                <span>gerencia@adyronweb.site</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm border-t border-white/5 pt-8">
+                <p>&copy; 2026 ADYRON Digital Agency. Todos los derechos reservados.</p>
+                <p class="mt-2 text-xs opacity-70">Tecnología 100% Ecuatoriana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal (Brief Empresarial) -->
+    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()"></div>
+        <div class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
+                <button onclick="closeContactModal()" class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto">
+                <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Nombre Completo</label>
+                        <input type="text" id="briefName" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Empresa / Marca</label>
+                        <input type="text" id="briefCompany" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Servicio de Interés</label>
+                        <select id="briefService" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                            <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
+                            <option value="E-commerce" class="bg-black">E-commerce</option>
+                            <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
+                            <option value="Branding" class="bg-black">Branding</option>
+                            <option value="Ads / Publicidad" class="bg-black">Ads / Publicidad</option>
+                            <option value="Otro" class="bg-black">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Detalles del Proyecto</label>
+                        <textarea id="briefDetails" rows="3" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js?v=1.1"></script>
+    <script>lucide.createIcons();</script>
+    
+    <!-- Scripts Específicos de la Página -->
+    <script>
+        // Banner Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const title = document.getElementById('anim-text');
+            const btn = document.getElementById('anim-btn');
+            const BTN_DURATION = 10000; 
+
+            function runSequence() {
+                title.className = 'main-title'; 
+                btn.className = 'cta-button';
+
+                setTimeout(() => {
+                    title.classList.add('exploding');
+                    setTimeout(() => {
+                        btn.classList.add('visible');
+                        setTimeout(() => {
+                            btn.classList.remove('visible');
+                            title.className = 'main-title hidden';
+                            setTimeout(runSequence, 1000);
+                        }, BTN_DURATION);
+                    }, 800); 
+                }, 3000); 
+            }
+
+            runSequence();
+
+            // Canvas Logic
+            const canvas = document.getElementById('network-canvas');
+            const ctx = canvas.getContext('2d');
+            const container = document.getElementById('banner-box');
+            let width, height;
+            const BLUE_COLOR = '0, 85, 255'; 
+            const nodes = [{x: 0.26, y: 0.32}, {x: 0.48, y: 0.28}, {x: 0.62, y: 0.42}, {x: 0.88, y: 0.35}, {x: 0.80, y: 0.55}, {x: 0.90, y: 0.80}, {x: 0.32, y: 0.70}];
+            const connections = [[0,1], [1,2], [2,3], [3,4], [4,5], [0,6], [1,6], [2,4]];
+            let particles = [];
+
+            function resizeCanvas() {
+                width = container.clientWidth; 
+                height = container.clientHeight;
+                canvas.width = width;
+                canvas.height = height;
+                initParticles();
+            }
+
+            class Particle {
+                constructor() { this.reset(); }
+                reset() {
+                    const conn = connections[Math.floor(Math.random() * connections.length)];
+                    this.start = nodes[conn[0]];
+                    this.end = nodes[conn[1]];
+                    if(Math.random() > 0.5) [this.start, this.end] = [this.end, this.start];
+                    this.progress = 0;
+                    this.speed = 0.005 + Math.random() * 0.01;
+                }
+                update() {
+                    this.progress += this.speed;
+                    if(this.progress >= 1) this.reset();
+                }
+                draw() {
+                    const sx = this.start.x * width;
+                    const sy = this.start.y * height;
+                    const ex = this.end.x * width;
+                    const ey = this.end.y * height;
+                    const x = sx + (ex - sx) * this.progress;
+                    const y = sy + (ey - sy) * this.progress;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 2.5, 0, Math.PI*2);
+                    ctx.fillStyle = `rgb(${BLUE_COLOR})`;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = `rgb(${BLUE_COLOR})`;
+                    ctx.fill();
+                    ctx.shadowBlur = 0;
+                }
+            }
+
+            function initParticles() {
+                particles = [];
+                for(let i=0; i<20; i++) particles.push(new Particle());
+            }
+
+            function animate() {
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+                ctx.clearRect(0, 0, width, height);
+                ctx.lineWidth = 1;
+                connections.forEach(conn => {
+                    const s = nodes[conn[0]];
+                    const e = nodes[conn[1]];
+                    ctx.beginPath();
+                    ctx.moveTo(s.x * width, s.y * height);
+                    ctx.lineTo(e.x * width, e.y * height);
+                    ctx.strokeStyle = `rgba(${BLUE_COLOR}, 0.2)`; 
+                    ctx.stroke();
+                });
+                particles.forEach(p => { p.update(); p.draw(); });
+                requestAnimationFrame(animate);
+            }
+
+            window.addEventListener('resize', () => { resizeCanvas(); });
+            setTimeout(() => { resizeCanvas(); animate(); }, 100);
+        });
+
+        // Holo Logo Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('holoContainer');
+            const images = document.querySelectorAll('.holo-img');
+            let currentIndex = 0;
+            const INTERVAL_TIME = 5000; 
+
+            function switchLogo() {
+                container.classList.add('scanning');
+                images[currentIndex].classList.add('glitching');
+                setTimeout(() => {
+                    images[currentIndex].classList.remove('active', 'glitching');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add('active');
+                }, 600); 
+                setTimeout(() => {
+                    container.classList.remove('scanning');
+                }, 1500); 
+            }
+            setInterval(switchLogo, INTERVAL_TIME);
+        });
+
+        // Map Hover Sound Effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const hoverSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
+            hoverSound.volume = 0.15; // Volumen bajo y sutil
+
+            document.querySelectorAll('.city-node').forEach(node => {
+                node.addEventListener('mouseenter', () => {
+                    hoverSound.currentTime = 0;
+                    hoverSound.play().catch(() => {}); // Ignorar errores de autoplay
+                });
+            });
+        });
+    </script>
+    <script>
+        function openContactModal() {
+            document.getElementById('contactModal').classList.remove('hidden');
+            document.getElementById('contactModal').classList.add('flex');
+        }
+        function closeContactModal() {
+            document.getElementById('contactModal').classList.add('hidden');
+            document.getElementById('contactModal').classList.remove('flex');
+        }
+        function sendBriefToWhatsapp(e) {
+            e.preventDefault();
+            const name = document.getElementById('briefName').value;
+            const company = document.getElementById('briefCompany').value;
+            const service = document.getElementById('briefService').value;
+            const details = document.getElementById('briefDetails').value;
+            
+            const message = `Hola ADYRON, envío mi Brief Empresarial:%0A%0A` +
+                            `👤 *Nombre:* ${name}%0A` +
+                            `🏢 *Empresa:* ${company}%0A` +
+                            `🚀 *Servicio:* ${service}%0A` +
+                            `📝 *Detalles:* ${details}`;
+            
+            window.open(`https://wa.me/593960761791?text=${message}`, '_blank');
+            closeContactModal();
+        }
+    </script>
+    <script src="js/particles.js?v=1.1"></script>
+    <script>
+        // Tailwind Config Fallback
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0036FF',
+                            dark: '#020202',
+                            surface: '#0A0A0A',
+                            bg: '#020617',
+                            cyan: '#00f7ff',
+                            dim: '#64748B',
+                            gray: '#888888',
+                            light: '#F3F3F3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter Tight', 'Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif'],
+                        ui: ['Poppins', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(0, 54, 255, 0.2)',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-glow': 'pulseGlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'infinite-scroll-up': 'scrollUp 30s linear infinite',
+                        'infinite-scroll-down': 'scrollDown 35s linear infinite',
+                        'border-pulse': 'borderPulse 3s infinite',
+                        'text-flow': 'textFlow 5s ease infinite',
+                        'grid-flow': 'gridFlow 4s linear infinite',
+                        'blob': 'blob 7s infinite',
+                        'modal-in': 'modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
+                        pulseGlow: { '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(0, 54, 255, 0.2)' }, '50%': { opacity: '.8', boxShadow: '0 0 40px rgba(0, 54, 255, 0.5)' } },
+                        borderPulse: { '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' }, '50%': { borderColor: '#0036FF', boxShadow: '0 0 20px rgba(0, 54, 255, 0.4)' } },
+                        scrollUp: { '0%': { transform: 'translateY(0)' }, '100%': { transform: 'translateY(-50%)' } },
+                        scrollDown: { '0%': { transform: 'translateY(-50%)' }, '100%': { transform: 'translateY(0)' } },
+                        textFlow: { '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' }, '50%': { 'background-size': '200% 200%', 'background-position': 'right center' } },
+                        gridFlow: { '0%': { backgroundPosition: '0 0' }, '100%': { backgroundPosition: '0 4rem' } },
+                        blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
+                        modalIn: { from: { opacity: '0', transform: 'scale(0.95) translateY(20px)' }, to: { opacity: '1', transform: 'scale(1) translateY(0)' } }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "adyron-next",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tailwindcss -i ./input.css -o ./css/styles.css --watch",
+    "build": "tailwindcss -i ./input.css -o ./css/styles.css --minify",
+    "sitemap": "node scripts/generate-sitemap.js"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
