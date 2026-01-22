@@ -1,41 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Servicios | ADYRON</title>
-    <meta name="description" content="Servicios de desarrollo web, e-commerce, branding y publicidad digital (Ads) en Ecuador. Soluciones tecnológicas para escalar tu negocio.">
-    
+    <meta name="description"
+        content="Servicios de desarrollo web, e-commerce, branding y publicidad digital (Ads) en Ecuador. Soluciones tecnológicas para escalar tu negocio.">
+
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" type="image/png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@400;600;700;800;900&family=Orbitron:wght@500;700;900&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuración inyectada en index.html o compartida -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
+    <link href="./src/style.css" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { background-color: #020202; color: #ffffff; overflow-x: hidden; }
+        body {
+            background-color: #020202;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
         }
+
         .glass-card:hover {
             border-color: rgba(0, 54, 255, 0.3);
             background: rgba(255, 255, 255, 0.05);
             transform: translateY(-5px);
         }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- PREMIUM TECH BUTTON --- */
+        .btn-tech-glow {
+            position: relative;
+            background: rgba(0, 30, 255, 0.1);
+            color: #00f7ff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid #00f7ff;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 10px rgba(0, 247, 255, 0.2), inset 0 0 10px rgba(0, 247, 255, 0.1);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-tech-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.4), transparent);
+            transition: 0.5s;
+            z-index: -1;
+            transform: skewX(-25deg);
+        }
+
+        .btn-tech-glow:hover {
+            color: #fff;
+            background: #0036FF;
+            box-shadow: 0 0 30px #00f7ff, 0 0 60px #0036FF;
+            border-color: #fff;
+            transform: translateY(-2px) scale(1.05);
+            text-shadow: 0 0 5px #fff;
+        }
+
+        .btn-tech-glow:hover::before {
+            left: 100%;
+            transition: 0.5s;
+        }
 
         /* --- FAQ PREMIUM STYLES (Adapted) --- */
         :root {
@@ -53,7 +119,11 @@
             filter: drop-shadow(0 0 2px rgba(0, 54, 255, 0.5));
         }
 
-        @keyframes data-flow { to { background-position: -200% center; } }
+        @keyframes data-flow {
+            to {
+                background-position: -200% center;
+            }
+        }
 
         .faq-item-custom {
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -63,12 +133,14 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
+
         .faq-item-custom:hover {
             border-color: var(--royal-blue);
             background: rgba(255, 255, 255, 0.05);
             transform: translateY(-3px);
             box-shadow: 0 10px 40px -10px rgba(0, 54, 255, 0.2);
         }
+
         .faq-item-custom.active {
             background: rgba(0, 54, 255, 0.1);
             border-color: var(--royal-blue);
@@ -88,29 +160,99 @@
             outline: none;
         }
 
-        .connection-indicator { display: flex; align-items: flex-end; gap: 3px; margin-right: 15px; height: 15px; width: 20px; }
-        .bar { width: 4px; background-color: #4b5563; border-radius: 2px; transition: background-color 0.3s; }
-        .bar:nth-child(1) { height: 6px; }
-        .bar:nth-child(2) { height: 10px; }
-        .bar:nth-child(3) { height: 15px; }
-
-        .faq-item-custom.active .bar { background-color: var(--bright-signal); animation: signal-connect 0.6s ease forwards; }
-        .faq-item-custom.active .bar:nth-child(1) { animation-delay: 0.1s; }
-        .faq-item-custom.active .bar:nth-child(2) { animation-delay: 0.2s; }
-        .faq-item-custom.active .bar:nth-child(3) { animation-delay: 0.3s; }
-
-        @keyframes signal-connect {
-            0% { opacity: 0.3; transform: scaleY(0.8); }
-            50% { opacity: 1; transform: scaleY(1.2); }
-            100% { opacity: 1; transform: scaleY(1); background-color: var(--bright-signal); }
+        .connection-indicator {
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+            margin-right: 15px;
+            height: 15px;
+            width: 20px;
         }
 
-        .icon-custom { transition: transform 0.4s ease; color: #6b7280; }
-        .faq-item-custom.active .icon-custom { transform: rotate(180deg); color: var(--bright-signal); }
+        .bar {
+            width: 4px;
+            background-color: #4b5563;
+            border-radius: 2px;
+            transition: background-color 0.3s;
+        }
 
-        .faq-answer-custom { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-in-out; }
-        .answer-content-custom { padding: 0 30px 30px 58px; color: #9ca3af; font-size: 1rem; line-height: 1.6; opacity: 0; transform: translateY(10px); transition: opacity 0.4s ease, transform 0.4s ease; }
-        .faq-item-custom.active .answer-content-custom { opacity: 1; transform: translateY(0); }
+        .bar:nth-child(1) {
+            height: 6px;
+        }
+
+        .bar:nth-child(2) {
+            height: 10px;
+        }
+
+        .bar:nth-child(3) {
+            height: 15px;
+        }
+
+        .faq-item-custom.active .bar {
+            background-color: var(--bright-signal);
+            animation: signal-connect 0.6s ease forwards;
+        }
+
+        .faq-item-custom.active .bar:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .faq-item-custom.active .bar:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .faq-item-custom.active .bar:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        @keyframes signal-connect {
+            0% {
+                opacity: 0.3;
+                transform: scaleY(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scaleY(1.2);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+                background-color: var(--bright-signal);
+            }
+        }
+
+        .icon-custom {
+            transition: transform 0.4s ease;
+            color: #6b7280;
+        }
+
+        .faq-item-custom.active .icon-custom {
+            transform: rotate(180deg);
+            color: var(--bright-signal);
+        }
+
+        .faq-answer-custom {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+
+        .answer-content-custom {
+            padding: 0 30px 30px 58px;
+            color: #9ca3af;
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .faq-item-custom.active .answer-content-custom {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Interactive Hover Button (Tech Effect) */
         .interactive-hover-button {
@@ -129,22 +271,56 @@
             cursor: pointer;
             backdrop-filter: blur(10px);
         }
-        .interactive-hover-button:hover { border-color: var(--royal-blue); box-shadow: 0 0 30px rgba(0, 54, 255, 0.3); }
-        .interactive-hover-button .dot { position: absolute; top: 50%; left: 50%; width: 300%; padding-bottom: 300%; border-radius: 50%; background-color: var(--royal-blue); transform: translate(-50%, -50%) scale(0); transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); z-index: 0; }
-        .interactive-hover-button:hover .dot { transform: translate(-50%, -50%) scale(1); }
-        .interactive-hover-button span { position: relative; z-index: 1; display: flex; align-items: center; gap: 0.5rem; }
+
+        .interactive-hover-button:hover {
+            border-color: var(--royal-blue);
+            box-shadow: 0 0 30px rgba(0, 54, 255, 0.3);
+        }
+
+        .interactive-hover-button .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            padding-bottom: 300%;
+            border-radius: 50%;
+            background-color: var(--royal-blue);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 0;
+        }
+
+        .interactive-hover-button:hover .dot {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .interactive-hover-button span {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
+
+            *,
+            ::before,
+            ::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
-            .reveal { opacity: 1 !important; transform: none !important; }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
         }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-blue selection:text-white">
 
     <!-- Navigation -->
@@ -152,13 +328,17 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="relative w-14 h-14 flex items-center justify-center group">
                 <!-- Efecto Neón Rotativo -->
-                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
+                <div
+                    class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                </div>
                 <!-- Cristal Blanco Brillante -->
-                <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
-                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40" height="40" class="w-10 h-10 object-contain p-0.5">
+                <div
+                    class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40"
+                        height="40" class="w-10 h-10 object-contain p-0.5">
                 </div>
             </a>
-            
+
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
                 <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
                 <a href="servicios.html" class="text-white">Servicios</a>
@@ -166,41 +346,53 @@
                 <a href="planes.html" class="hover:text-white transition-colors">Planes</a>
                 <a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a>
                 <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
-                <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all">Contacto</a>
+                <a href="#" onclick="openContactModal(); return false;"
+                    class="btn-tech-glow px-6 py-2 rounded-full text-sm group">
+                    <span>Contacto</span>
+                    <i data-lucide="zap" class="w-4 h-4 ml-2 group-hover:text-white transition-colors"></i>
+                </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50" aria-label="Abrir menú">
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50"
+                aria-label="Abrir menú">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
+        <div id="mobile-menu"
+            class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
             <a href="index.html" class="text-lg font-medium text-gray-300">Inicio</a>
             <a href="servicios.html" class="text-lg font-medium text-white">Servicios</a>
             <a href="portafolio.html" class="text-lg font-medium text-gray-300">Portafolio</a>
             <a href="planes.html" class="text-lg font-medium text-gray-300">Planes</a>
             <a href="nosotros.html" class="text-lg font-medium text-gray-300">Nosotros</a>
             <a href="blog.html" class="text-lg font-medium text-gray-300">Blog</a>
-            <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
+            <a href="#" onclick="openContactModal(); return false;"
+                class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="pt-40 pb-20 relative overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl -z-10 opacity-30 pointer-events-none">
-            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-[100px] opacity-50"></div>
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl -z-10 opacity-30 pointer-events-none">
+            <div
+                class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-[100px] opacity-50">
+            </div>
         </div>
-        
+
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-6 reveal">
                 SOLUCIONES DIGITALES <br>
                 <span class="text-brand-blue">DE ALTO IMPACTO</span>
             </h1>
             <p class="text-gray-400 max-w-2xl mx-auto text-lg reveal delay-100">
-                No vendemos "servicios", implementamos sistemas de crecimiento. Cada línea de código y cada pixel tiene un propósito: vender más.
+                No vendemos "servicios", implementamos sistemas de crecimiento. Cada línea de código y cada pixel tiene
+                un propósito: vender más.
             </p>
         </div>
     </section>
@@ -209,59 +401,69 @@
     <section class="py-20 bg-brand-surface/50">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <!-- Service 1 -->
                 <div class="glass-card p-8 rounded-2xl reveal">
-                    <div class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                    <div
+                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
                         <i data-lucide="layout" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Desarrollo Web High-End</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Sitios web ultrarrápidos construidos con tecnologías modernas (Next.js, Tailwind). Optimizados para conversión y SEO técnico desde el día uno.
+                        Sitios web ultrarrápidos construidos con tecnologías modernas (Next.js, Tailwind). Optimizados
+                        para conversión y SEO técnico desde el día uno.
                     </p>
                 </div>
 
                 <!-- Service 2 -->
                 <div class="glass-card p-8 rounded-2xl reveal delay-100">
-                    <div class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                    <div
+                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
                         <i data-lucide="shopping-bag" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">E-commerce Scalable</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Tiendas online que no se caen en Black Friday. Integraciones con pasarelas de pago locales, gestión de inventario y recuperación de carritos.
+                        Tiendas online que no se caen en Black Friday. Integraciones con pasarelas de pago locales,
+                        gestión de inventario y recuperación de carritos.
                     </p>
                 </div>
 
                 <!-- Service 3 -->
                 <div class="glass-card p-8 rounded-2xl reveal delay-200">
-                    <div class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                    <div
+                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
                         <i data-lucide="palette" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Branding de Autoridad</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Identidad visual que eleva el valor percibido de tu marca. Logos, manuales de marca y dirección de arte para redes sociales.
+                        Identidad visual que eleva el valor percibido de tu marca. Logos, manuales de marca y dirección
+                        de arte para redes sociales.
                     </p>
                 </div>
 
                 <!-- Service 4 -->
                 <div class="glass-card p-8 rounded-2xl reveal">
-                    <div class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                    <div
+                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
                         <i data-lucide="target" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Paid Media (Ads)</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Campañas en Meta y Google Ads con estructura de embudo. Dejamos de lado las métricas vanidosas para enfocarnos en el ROAS.
+                        Campañas en Meta y Google Ads con estructura de embudo. Dejamos de lado las métricas vanidosas
+                        para enfocarnos en el ROAS.
                     </p>
                 </div>
 
                 <!-- Service 5 -->
                 <div class="glass-card p-8 rounded-2xl reveal delay-100">
-                    <div class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                    <div
+                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
                         <i data-lucide="bot" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Automatización con IA</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
-                        Chatbots de atención al cliente, automatización de correos y CRMs que trabajan solos. Ahorra horas operativas cada semana.
+                        Chatbots de atención al cliente, automatización de correos y CRMs que trabajan solos. Ahorra
+                        horas operativas cada semana.
                     </p>
                 </div>
 
@@ -272,7 +474,8 @@
                     </div>
                     <h3 class="text-xl font-bold mb-3">Growth Partner</h3>
                     <p class="text-gray-300 text-sm leading-relaxed">
-                        Nos convertimos en tu departamento de marketing externo. Estrategia integral, ejecución y optimización continua mes a mes.
+                        Nos convertimos en tu departamento de marketing externo. Estrategia integral, ejecución y
+                        optimización continua mes a mes.
                     </p>
                 </div>
 
@@ -284,12 +487,13 @@
     <section class="py-20 bg-brand-surface/30 border-t border-white/5">
         <div class="container mx-auto px-6 max-w-3xl reveal">
             <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-heading font-black mb-2 uppercase tracking-widest">SOLUCIONES <span class="highlight-text">DIGITALES</span></h2>
+                <h2 class="text-3xl sm:text-4xl font-heading font-black mb-2 uppercase tracking-widest">SOLUCIONES <span
+                        class="highlight-text">DIGITALES</span></h2>
                 <p class="text-gray-400 text-lg">Conectando tu marca con el futuro.</p>
             </div>
-            
+
             <div class="space-y-4">
-                
+
                 <div class="faq-item-custom">
                     <button class="faq-question-custom" onclick="toggleFaq(this)">
                         <div class="flex items-center">
@@ -302,11 +506,13 @@
                     </button>
                     <div class="faq-answer-custom">
                         <div class="answer-content-custom">
-                            <p><strong><span class="text-brand-blue">●</span> Conexión Establecida:</strong> Desarrollamos sitios web, gestionamos redes sociales y creamos estrategias para impulsar tu marca.</p>
+                            <p><strong><span class="text-brand-blue">●</span> Conexión Establecida:</strong>
+                                Desarrollamos sitios web, gestionamos redes sociales y creamos estrategias para impulsar
+                                tu marca.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="faq-item-custom">
                     <button class="faq-question-custom" onclick="toggleFaq(this)">
                         <div class="flex items-center">
@@ -319,7 +525,8 @@
                     </button>
                     <div class="faq-answer-custom">
                         <div class="answer-content-custom">
-                            <p>Solo contáctanos con tu idea y objetivos; nos encargamos del resto del desarrollo técnico y creativo para que tú solo te preocupes por crecer.</p>
+                            <p>Solo contáctanos con tu idea y objetivos; nos encargamos del resto del desarrollo técnico
+                                y creativo para que tú solo te preocupes por crecer.</p>
                         </div>
                     </div>
                 </div>
@@ -336,7 +543,8 @@
                     </button>
                     <div class="faq-answer-custom">
                         <div class="answer-content-custom">
-                            <p>El tiempo varía según el proyecto, pero nuestro flujo optimizado nos permite entregar sitios web funcionales en 3 a 6 semanas.</p>
+                            <p>El tiempo varía según el proyecto, pero nuestro flujo optimizado nos permite entregar
+                                sitios web funcionales en 3 a 6 semanas.</p>
                         </div>
                     </div>
                 </div>
@@ -353,7 +561,8 @@
                     </button>
                     <div class="faq-answer-custom">
                         <div class="answer-content-custom">
-                            <p>Sí, brindamos mantenimiento activo y actualizaciones de seguridad para que tu presencia digital siempre esté online y protegida.</p>
+                            <p>Sí, brindamos mantenimiento activo y actualizaciones de seguridad para que tu presencia
+                                digital siempre esté online y protegida.</p>
                         </div>
                     </div>
                 </div>
@@ -370,7 +579,8 @@
                     </button>
                     <div class="faq-answer-custom">
                         <div class="answer-content-custom">
-                            <p>Claro, nuestra tecnología es escalable. Ayudamos a marcas reales de cualquier tamaño a conectar con su público objetivo.</p>
+                            <p>Claro, nuestra tecnología es escalable. Ayudamos a marcas reales de cualquier tamaño a
+                                conectar con su público objetivo.</p>
                         </div>
                     </div>
                 </div>
@@ -387,7 +597,8 @@
                     </button>
                     <div class="faq-answer-custom">
                         <div class="answer-content-custom">
-                            <p>Analizamos los datos de tu mercado y objetivos para crear planes de ruta únicos que reflejen la esencia digital de tu marca.</p>
+                            <p>Analizamos los datos de tu mercado y objetivos para crear planes de ruta únicos que
+                                reflejen la esencia digital de tu marca.</p>
                         </div>
                     </div>
                 </div>
@@ -410,20 +621,64 @@
     </section>
 
     <footer class="bg-black pt-16 pb-8 relative">
-        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]"></div>
+        <div
+            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]">
+        </div>
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <!-- Brand -->
                 <div class="col-span-1 md:col-span-1">
                     <a href="index.html" class="relative w-20 h-20 flex items-center justify-center group mb-6">
-                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
-                        <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
-                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                        </div>
+                        <div
+                            class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON"
+                                width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
                         </div>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Transformamos ideas complejas en productos digitales simples.
                     </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="https://www.facebook.com/profile.php?id=61584513332865"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#1877F2] hover:shadow-[0_0_15px_rgba(24,119,242,0.5)]"
+                            aria-label="Facebook">
+                            <i data-lucide="facebook"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#1877F2] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.instagram.com/adyron8/"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#E4405F] hover:shadow-[0_0_15px_rgba(228,64,95,0.5)]"
+                            aria-label="Instagram">
+                            <i data-lucide="instagram"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#E4405F] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adyron-sitios-web-con-estilos-94966339b/"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#0A66C2] hover:shadow-[0_0_15px_rgba(10,102,194,0.5)]"
+                            aria-label="LinkedIn">
+                            <i data-lucide="linkedin"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#0A66C2] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://x.com/adyronweb"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                            aria-label="X">
+                            <i data-lucide="twitter"
+                                class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@adyronsitioswebsconestilo"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FF0000] hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]"
+                            aria-label="YouTube">
+                            <i data-lucide="youtube"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FF0000] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@adyronsitioswebs"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FE2C55] hover:shadow-[0_0_15px_rgba(254,44,85,0.5)]"
+                            aria-label="TikTok">
+                            <i data-lucide="video"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FE2C55] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Links -->
@@ -432,7 +687,8 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="index.html" class="hover:text-brand-blue transition-colors">Inicio</a></li>
                         <li><a href="servicios.html" class="hover:text-brand-blue transition-colors">Servicios</a></li>
-                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a></li>
+                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a>
+                        </li>
                         <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a></li>
                     </ul>
                 </div>
@@ -442,10 +698,14 @@
                     <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Pagos</h4>
                     <p class="text-gray-400 text-sm mb-2">Paga en CÓMODAS CUOTAS</p>
                     <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
-                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16" loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24" loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16"
+                            loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24"
+                            loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20"
+                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20"
+                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
 
@@ -454,16 +714,20 @@
                     <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Contacto</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li>
-                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </div>
                                 <span>+593 960 761 791</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
                                     <i data-lucide="mail" class="w-4 h-4"></i>
                                 </div>
                                 <span>gerencia@adyronweb.site</span>
@@ -480,31 +744,42 @@
     </footer>
 
     <!-- AI Assistant Chat Widget -->
-    <button id="chatToggle" aria-label="Abrir chat con IA" class="fixed bottom-6 right-6 z-50 bg-brand-blue hover:bg-blue-600 text-white w-16 h-16 rounded-full shadow-[0_0_30px_rgba(0,54,255,0.4)] transition-all hover:scale-110 group flex items-center justify-center overflow-hidden border-2 border-white/20">
+    <button id="chatToggle" aria-label="Abrir chat con IA"
+        class="fixed bottom-6 right-6 z-50 bg-brand-blue hover:bg-blue-600 text-white w-16 h-16 rounded-full shadow-[0_0_30px_rgba(0,54,255,0.4)] transition-all hover:scale-110 group flex items-center justify-center overflow-hidden border-2 border-white/20">
         <span class="absolute top-1 right-1 flex h-4 w-4 z-20">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
             <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 border border-black"></span>
         </span>
-        <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="Asistente ADYRON" width="64" height="64" class="w-full h-full object-cover relative z-10">
+        <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="Asistente ADYRON" width="64" height="64"
+            class="w-full h-full object-cover relative z-10">
     </button>
 
-    <div id="chatBox" class="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[350px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl hidden z-50 flex flex-col backdrop-blur-xl transition-all duration-300 transform translate-y-10 opacity-0">
-        <div class="p-4 border-b border-white/10 flex justify-between items-center bg-gradient-to-r from-brand-blue/20 to-transparent rounded-t-2xl">
+    <div id="chatBox"
+        class="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[350px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl hidden z-50 flex flex-col backdrop-blur-xl transition-all duration-300 transform translate-y-10 opacity-0">
+        <div
+            class="p-4 border-b border-white/10 flex justify-between items-center bg-gradient-to-r from-brand-blue/20 to-transparent rounded-t-2xl">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shadow-lg shadow-brand-blue/30 overflow-hidden">
-                    <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="AI" width="40" height="40" class="w-full h-full object-cover">
+                <div
+                    class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shadow-lg shadow-brand-blue/30 overflow-hidden">
+                    <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="AI" width="40" height="40"
+                        class="w-full h-full object-cover">
                 </div>
                 <div>
                     <span class="font-bold text-white block leading-tight">ADYRON AI</span>
-                    <span class="text-xs text-green-400 flex items-center gap-1"><span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> En línea</span>
+                    <span class="text-xs text-green-400 flex items-center gap-1"><span
+                            class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> En línea</span>
                 </div>
             </div>
-            <button id="closeChat" aria-label="Cerrar chat" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <button id="closeChat" aria-label="Cerrar chat" class="text-gray-400 hover:text-white transition-colors"><i
+                    data-lucide="x" class="w-5 h-5"></i></button>
         </div>
-        
-        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
+
+        <div id="chatMessages"
+            class="flex-1 overflow-y-auto p-4 space-y-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
             <div id="typing" class="hidden mb-4 flex gap-3">
-                <div class="w-8 h-8 rounded-full bg-brand-blue/50 flex-shrink-0 flex items-center justify-center text-xs">...</div>
+                <div
+                    class="w-8 h-8 rounded-full bg-brand-blue/50 flex-shrink-0 flex items-center justify-center text-xs">
+                    ...</div>
                 <div class="bg-white/10 px-4 py-3 rounded-2xl rounded-tl-none flex gap-1 items-center h-10">
                     <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
                     <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-100"></span>
@@ -515,8 +790,11 @@
 
         <div class="p-4 border-t border-white/10 bg-black/20">
             <div class="flex gap-2 relative">
-                <input type="text" id="userInput" class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-brand-blue focus:bg-white/10 transition-all placeholder-gray-500" placeholder="Escribe tu mensaje...">
-                <button id="sendBtn" aria-label="Enviar mensaje" class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-blue p-2 rounded-lg hover:bg-blue-600 transition-colors text-white shadow-lg shadow-brand-blue/20">
+                <input type="text" id="userInput"
+                    class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-brand-blue focus:bg-white/10 transition-all placeholder-gray-500"
+                    placeholder="Escribe tu mensaje...">
+                <button id="sendBtn" aria-label="Enviar mensaje"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-blue p-2 rounded-lg hover:bg-blue-600 transition-colors text-white shadow-lg shadow-brand-blue/20">
                     <i data-lucide="send" class="w-4 h-4"></i>
                 </button>
             </div>
@@ -528,27 +806,36 @@
 
     <!-- Contact Modal (Brief Empresarial) -->
     <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()"></div>
-        <div class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()">
+        </div>
+        <div
+            class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
             <div class="p-6 border-b border-white/10 flex justify-between items-center">
                 <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
-                <button onclick="closeContactModal()" aria-label="Cerrar modal" class="text-gray-400 hover:text-white transition-colors">
+                <button onclick="closeContactModal()" aria-label="Cerrar modal"
+                    class="text-gray-400 hover:text-white transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
             <div class="p-6 overflow-y-auto">
                 <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Nombre Completo</label>
-                        <input type="text" id="briefName" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <label for="briefName" class="block text-sm font-medium text-gray-400 mb-1">Nombre
+                            Completo</label>
+                        <input type="text" id="briefName" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Empresa / Marca</label>
-                        <input type="text" id="briefCompany" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <label for="briefCompany" class="block text-sm font-medium text-gray-400 mb-1">Empresa /
+                            Marca</label>
+                        <input type="text" id="briefCompany" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Servicio de Interés</label>
-                        <select id="briefService" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <label for="briefService" class="block text-sm font-medium text-gray-400 mb-1">Servicio de
+                            Interés</label>
+                        <select id="briefService"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
                             <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
                             <option value="E-commerce" class="bg-black">E-commerce</option>
                             <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
@@ -558,10 +845,14 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Detalles del Proyecto</label>
-                        <textarea id="briefDetails" rows="3" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+                        <label for="briefDetails" class="block text-sm font-medium text-gray-400 mb-1">Detalles del
+                            Proyecto</label>
+                        <textarea id="briefDetails" rows="3"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors"
+                            placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                    <button type="submit"
+                        class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
                         <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
                     </button>
                 </form>
@@ -571,7 +862,7 @@
 
     <script>
         lucide.createIcons();
-        
+
         document.getElementById('chatToggle').addEventListener('click', () => {
             const chat = document.getElementById('chatBox');
             if (!chat.classList.contains('hidden')) {
@@ -584,58 +875,9 @@
     <script src="js/chat-mantra.js?v=1.1"></script>
     <script src="js/app.js?v=1.1"></script>
     <script src="js/particles.js?v=1.1"></script>
-    <script>
-        // Tailwind Config Fallback
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            blue: '#0036FF',
-                            dark: '#020202',
-                            surface: '#0A0A0A',
-                            bg: '#020617',
-                            cyan: '#00f7ff',
-                            dim: '#64748B',
-                            gray: '#888888',
-                            light: '#F3F3F3'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter Tight', 'Inter', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                        display: ['Orbitron', 'sans-serif'],
-                        ui: ['Poppins', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'neon': '0 0 15px rgba(0, 54, 255, 0.2)',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'infinite-scroll-up': 'scrollUp 30s linear infinite',
-                        'infinite-scroll-down': 'scrollDown 35s linear infinite',
-                        'border-pulse': 'borderPulse 3s infinite',
-                        'text-flow': 'textFlow 5s ease infinite',
-                        'grid-flow': 'gridFlow 4s linear infinite',
-                        'blob': 'blob 7s infinite',
-                        'modal-in': 'modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                    },
-                    keyframes: {
-                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
-                        pulseGlow: { '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(0, 54, 255, 0.2)' }, '50%': { opacity: '.8', boxShadow: '0 0 40px rgba(0, 54, 255, 0.5)' } },
-                        borderPulse: { '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' }, '50%': { borderColor: '#0036FF', boxShadow: '0 0 20px rgba(0, 54, 255, 0.4)' } },
-                        scrollUp: { '0%': { transform: 'translateY(0)' }, '100%': { transform: 'translateY(-50%)' } },
-                        scrollDown: { '0%': { transform: 'translateY(-50%)' }, '100%': { transform: 'translateY(0)' } },
-                        textFlow: { '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' }, '50%': { 'background-size': '200% 200%', 'background-position': 'right center' } },
-                        gridFlow: { '0%': { backgroundPosition: '0 0' }, '100%': { backgroundPosition: '0 4rem' } },
-                        blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
-                        modalIn: { from: { opacity: '0', transform: 'scale(0.95) translateY(20px)' }, to: { opacity: '1', transform: 'scale(1) translateY(0)' } }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
+    <link href="css/styles.css" rel="stylesheet">
     <script>
         function toggleFaq(element) {
             const item = element.parentElement;
@@ -673,16 +915,17 @@
             const company = document.getElementById('briefCompany').value;
             const service = document.getElementById('briefService').value;
             const details = document.getElementById('briefDetails').value;
-            
+
             const message = `Hola ADYRON, envío mi Brief Empresarial:%0A%0A` +
-                            `👤 *Nombre:* ${name}%0A` +
-                            `🏢 *Empresa:* ${company}%0A` +
-                            `🚀 *Servicio:* ${service}%0A` +
-                            `📝 *Detalles:* ${details}`;
-            
+                `👤 *Nombre:* ${name}%0A` +
+                `🏢 *Empresa:* ${company}%0A` +
+                `🚀 *Servicio:* ${service}%0A` +
+                `📝 *Detalles:* ${details}`;
+
             window.open(`https://wa.me/593960761791?text=${message}`, '_blank');
             closeContactModal();
         }
     </script>
 </body>
+
 </html>

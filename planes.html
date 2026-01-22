@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Planes de Inversión | ADYRON</title>
-    <meta name="description" content="Planes de desarrollo web, gestión de redes sociales y paquetes integrales de marketing digital. Precios transparentes y sin contratos forzosos.">
-    
+    <meta name="description"
+        content="Planes de desarrollo web, gestión de redes sociales y paquetes integrales de marketing digital. Precios transparentes y sin contratos forzosos.">
+
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" type="image/png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@400;600;700;800;900&family=Orbitron:wght@500;700;900&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { background-color: #020202; color: #ffffff; overflow-x: hidden; }
+        body {
+            background-color: #020202;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
         .tab-btn.active {
-            color: #00f7ff; }
-        .social-btn-2 { background: linear-gradient(90deg, #7a00ff, #bd00ff); color: white; border: none; }
+            color: #00f7ff;
+        }
+
+        .social-btn-2 {
+            background: linear-gradient(90deg, #7a00ff, #bd00ff);
+            color: white;
+            border: none;
+        }
 
         /* Card Base Styles */
         .custom-card {
@@ -34,29 +49,109 @@
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+
         .custom-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(255, 255, 255, 0.1);
         }
-        .web-card-1:hover { border-color: rgba(74, 222, 128, 0.5); box-shadow: 0 0 30px rgba(74, 222, 128, 0.1); }
-        .web-card-2:hover { border-color: #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
-        .web-card-3:hover { border-color: rgba(255, 255, 255, 0.5); box-shadow: 0 0 30px rgba(255, 255, 255, 0.1); }
-        .social-card-1:hover { border-color: rgba(34, 211, 238, 0.5); box-shadow: 0 0 30px rgba(34, 211, 238, 0.1); }
-        .social-card-2:hover { border-color: #9333ea; box-shadow: 0 0 30px rgba(147, 51, 234, 0.2); }
-        .social-card-3:hover { border-color: rgba(245, 158, 11, 0.5); box-shadow: 0 0 30px rgba(245, 158, 11, 0.1); }
-        .web-badge { padding: 4px 12px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 6px; }
-        .web-check { width: 18px; height: 18px; color: #00f7ff; flex-shrink: 0; }
+
+        .web-card-1:hover {
+            border-color: rgba(74, 222, 128, 0.5);
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.1);
+        }
+
+        .web-card-2:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .web-card-3:hover {
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+        }
+
+        .social-card-1:hover {
+            border-color: rgba(34, 211, 238, 0.5);
+            box-shadow: 0 0 30px rgba(34, 211, 238, 0.1);
+        }
+
+        .social-card-2:hover {
+            border-color: #9333ea;
+            box-shadow: 0 0 30px rgba(147, 51, 234, 0.2);
+        }
+
+        .social-card-3:hover {
+            border-color: rgba(245, 158, 11, 0.5);
+            box-shadow: 0 0 30px rgba(245, 158, 11, 0.1);
+        }
+
+        .web-badge {
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .web-check {
+            width: 18px;
+            height: 18px;
+            color: #00f7ff;
+            flex-shrink: 0;
+        }
 
         /* PACKS STYLES */
-        .pack-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(12px); }
-        .pack-card:hover { border-color: #00f7ff; box-shadow: 0 0 30px rgba(0, 247, 255, 0.1); }
-        .pack-savings { background: linear-gradient(90deg, #b4810b, #ffd700, #b4810b); color: black; font-weight: 800; font-size: 0.8rem; text-align: center; padding: 8px; }
-        .pack-gift { border: 1px solid rgba(0, 247, 255, 0.3); color: #00f7ff; background: rgba(0, 247, 255, 0.05); padding: 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 5px; margin-bottom: 15px; }
-        
+        .pack-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+        }
+
+        .pack-card:hover {
+            border-color: #00f7ff;
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.1);
+        }
+
+        .pack-savings {
+            background: linear-gradient(90deg, #b4810b, #ffd700, #b4810b);
+            color: black;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .pack-gift {
+            border: 1px solid rgba(0, 247, 255, 0.3);
+            color: #00f7ff;
+            background: rgba(0, 247, 255, 0.05);
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 15px;
+        }
+
         /* Botones Generales */
-        .btn-action { display: block; width: 100%; padding: 12px 0; text-align: center; border-radius: 8px; font-weight: 700; transition: 0.3s; text-transform: uppercase; font-size: 0.9rem; }
+        .btn-action {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
 
         /* Interactive Hover Button (Tech Effect) */
         .interactive-hover-button {
@@ -75,22 +170,104 @@
             cursor: pointer;
             backdrop-filter: blur(10px);
         }
-        .interactive-hover-button:hover { border-color: #0036FF; box-shadow: 0 0 30px rgba(0, 54, 255, 0.3); }
-        .interactive-hover-button .dot { position: absolute; top: 50%; left: 50%; width: 300%; padding-bottom: 300%; border-radius: 50%; background-color: #0036FF; transform: translate(-50%, -50%) scale(0); transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); z-index: 0; }
-        .interactive-hover-button:hover .dot { transform: translate(-50%, -50%) scale(1); }
-        .interactive-hover-button span { position: relative; z-index: 1; display: flex; align-items: center; gap: 0.5rem; }
+
+        .interactive-hover-button:hover {
+            border-color: #0036FF;
+            box-shadow: 0 0 30px rgba(0, 54, 255, 0.3);
+        }
+
+        .interactive-hover-button .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            padding-bottom: 300%;
+            border-radius: 50%;
+            background-color: #0036FF;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 0;
+        }
+
+        .interactive-hover-button:hover .dot {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .interactive-hover-button span {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
+
+            *,
+            ::before,
+            ::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
-            .reveal { opacity: 1 !important; transform: none !important; }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+    <style>
+        /* --- PREMIUM TECH BUTTON --- */
+        .btn-tech-glow {
+            position: relative;
+            background: rgba(0, 30, 255, 0.1);
+            color: #00f7ff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid #00f7ff;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 10px rgba(0, 247, 255, 0.2), inset 0 0 10px rgba(0, 247, 255, 0.1);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-tech-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.4), transparent);
+            transition: 0.5s;
+            z-index: -1;
+            transform: skewX(-25deg);
+        }
+
+        .btn-tech-glow:hover {
+            color: #fff;
+            background: #0036FF;
+            box-shadow: 0 0 30px #00f7ff, 0 0 60px #0036FF;
+            border-color: #fff;
+            transform: translateY(-2px) scale(1.05);
+            text-shadow: 0 0 5px #fff;
+        }
+
+        .btn-tech-glow:hover::before {
+            left: 100%;
+            transition: 0.5s;
         }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-blue selection:text-white">
 
     <!-- Navigation -->
@@ -98,13 +275,17 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="relative w-14 h-14 flex items-center justify-center group">
                 <!-- Efecto Neón Rotativo -->
-                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
+                <div
+                    class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                </div>
                 <!-- Cristal Blanco Brillante -->
-                <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
-                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40" height="40" class="w-10 h-10 object-contain p-0.5">
+                <div
+                    class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40"
+                        height="40" class="w-10 h-10 object-contain p-0.5">
                 </div>
             </a>
-            
+
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
                 <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
                 <a href="servicios.html" class="hover:text-white transition-colors">Servicios</a>
@@ -112,48 +293,64 @@
                 <a href="planes.html" class="text-white">Planes</a>
                 <a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a>
                 <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
-                <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all">Contacto</a>
+                <a href="#" onclick="openContactModal(); return false;"
+                    class="btn-tech-glow px-6 py-2 rounded-full text-sm group">
+                    <span>Contacto</span>
+                    <i data-lucide="zap" class="w-4 h-4 ml-2 group-hover:text-white transition-colors"></i>
+                </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50" aria-label="Abrir menú">
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50"
+                aria-label="Abrir menú">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
+        <div id="mobile-menu"
+            class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
             <a href="index.html" class="text-lg font-medium text-gray-300">Inicio</a>
             <a href="servicios.html" class="text-lg font-medium text-gray-300">Servicios</a>
             <a href="portafolio.html" class="text-lg font-medium text-gray-300">Portafolio</a>
             <a href="planes.html" class="text-lg font-medium text-white">Planes</a>
             <a href="nosotros.html" class="text-lg font-medium text-gray-300">Nosotros</a>
             <a href="blog.html" class="text-lg font-medium text-gray-300">Blog</a>
-            <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
+            <a href="#" onclick="openContactModal(); return false;"
+                class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
         </div>
     </nav>
 
     <!-- Hero -->
     <section class="pt-40 pb-12 text-center px-6">
-        <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-6 reveal">ELIGE TU <span class="text-brand-blue">CAMINO</span></h1>
-        <p class="text-gray-400 max-w-2xl mx-auto text-lg reveal delay-100">Soluciones modulares para cada etapa de tu negocio. Desde el desarrollo hasta la expansión masiva.</p>
-        
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-6 reveal">ELIGE TU <span
+                class="text-brand-blue">CAMINO</span></h1>
+        <p class="text-gray-400 max-w-2xl mx-auto text-lg reveal delay-100">Soluciones modulares para cada etapa de tu
+            negocio. Desde el desarrollo hasta la expansión masiva.</p>
+
         <!-- Tabs Navigation -->
-        <div class="flex flex-wrap justify-center gap-8 mt-12 border-b border-white/10 max-w-3xl mx-auto pb-4 reveal delay-200">
-            <button onclick="switchTab('web')" id="btn-web" class="tab-btn active text-lg font-heading font-bold text-white px-4 py-2">DESARROLLO WEB</button>
-            <button onclick="switchTab('social')" id="btn-social" class="tab-btn text-lg font-heading font-bold text-gray-500 hover:text-white px-4 py-2">REDES SOCIALES</button>
-            <button onclick="switchTab('packs')" id="btn-packs" class="tab-btn text-lg font-heading font-bold text-gray-500 hover:text-white px-4 py-2">PACKS INVERSIÓN</button>
+        <div
+            class="flex flex-wrap justify-center gap-8 mt-12 border-b border-white/10 max-w-3xl mx-auto pb-4 reveal delay-200">
+            <button onclick="switchTab('web')" id="btn-web"
+                class="tab-btn active text-lg font-heading font-bold text-white px-4 py-2">DESARROLLO WEB</button>
+            <button onclick="switchTab('social')" id="btn-social"
+                class="tab-btn text-lg font-heading font-bold text-gray-500 hover:text-white px-4 py-2">REDES
+                SOCIALES</button>
+            <button onclick="switchTab('packs')" id="btn-packs"
+                class="tab-btn text-lg font-heading font-bold text-gray-500 hover:text-white px-4 py-2">PACKS
+                INVERSIÓN</button>
         </div>
     </section>
 
     <!-- Pricing Grid -->
     <section class="py-12 container mx-auto px-6 relative min-h-[600px]">
-        
+
         <!-- 1. WEB DEV SECTION -->
         <div id="tab-content-web" class="relative w-full">
             <div class="plan-overlay" id="overlay-web"><canvas id="canvas-web"></canvas></div>
-            
+
             <div class="grid md:grid-cols-3 gap-8 relative z-10 max-w-6xl mx-auto">
                 <!-- Landing Start -->
                 <div class="custom-card web-card web-card-1 p-8 rounded-2xl flex flex-col">
@@ -165,16 +362,22 @@
                     <div class="text-sm text-gray-500 mb-6">Pago Único</div>
                     <div class="h-px bg-white/10 w-full mb-6"></div>
                     <ul class="space-y-4 text-sm text-gray-300 mb-8 flex-1">
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> Web One-Page (Todo en 1)</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> <strong class="text-white">Botones Ilimitados</strong></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> Web One-Page (Todo en 1)
+                        </li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> <strong
+                                class="text-white">Botones Ilimitados</strong></li>
                         <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> Galería Optimizada</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> Botón WhatsApp Flotante</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check"></i> Botón WhatsApp Flotante
+                        </li>
                     </ul>
-                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Landing%20Start" target="_blank" rel="noopener noreferrer" class="btn-action bg-transparent border border-green-500 text-green-400 hover:bg-green-500 hover:text-white">SOLICITAR</a>
+                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Landing%20Start" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-action bg-transparent border border-green-500 text-green-400 hover:bg-green-500 hover:text-white">SOLICITAR</a>
                 </div>
 
                 <!-- Pyme Pro -->
-                <div class="custom-card web-card web-card-2 p-8 rounded-2xl flex flex-col transform scale-105 bg-blue-900/10">
+                <div
+                    class="custom-card web-card web-card-2 p-8 rounded-2xl flex flex-col transform scale-105 bg-blue-900/10">
                     <div class="web-badge bg-blue-900/30 text-blue-400 mb-4 w-fit border border-blue-500/30">
                         <i data-lucide="edit" class="w-3 h-3"></i> Autoadministrable
                     </div>
@@ -183,13 +386,21 @@
                     <div class="text-sm text-gray-500 mb-6">Pago Único</div>
                     <div class="h-px bg-white/10 w-full mb-6"></div>
                     <ul class="space-y-4 text-sm text-gray-300 mb-8 flex-1">
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> <strong class="text-white">Web Completa (5 Secciones)</strong></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> Panel de Edición Fácil</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> <strong class="text-white">Dominio .COM Gratis</strong></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> Correos Corporativos</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> SEO (Visible en Google)</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> <strong
+                                class="text-white">Web Completa (5 Secciones)</strong></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> Panel de
+                            Edición Fácil</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> <strong
+                                class="text-white">Dominio .COM Gratis</strong></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> Correos
+                            Corporativos</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-blue-500"></i> SEO (Visible
+                            en Google)</li>
                     </ul>
-                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Pyme%20Pro" target="_blank" rel="noopener noreferrer" class="btn-action bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-900/50">IMPULSAR NEGOCIO</a>
+                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Pyme%20Pro" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-action bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-900/50">IMPULSAR
+                        NEGOCIO</a>
                 </div>
 
                 <!-- E-Commerce -->
@@ -202,40 +413,57 @@
                     <div class="text-sm text-gray-500 mb-6">Inversión Única</div>
                     <div class="h-px bg-white/10 w-full mb-6"></div>
                     <ul class="space-y-4 text-sm text-gray-300 mb-8 flex-1">
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> <strong class="text-white">Tienda Virtual Completa</strong></li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> Pasarela de Pagos</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> Gestión de Inventario</li>
-                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> Soporte Prioritario VIP</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> <strong
+                                class="text-white">Tienda Virtual Completa</strong></li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> Pasarela de
+                            Pagos</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> Gestión de
+                            Inventario</li>
+                        <li class="flex gap-3"><i data-lucide="check" class="web-check fill-white"></i> Soporte
+                            Prioritario VIP</li>
                     </ul>
-                    <a href="https://wa.me/593960761791?text=Me%20interesa%20E-Commerce" target="_blank" rel="noopener noreferrer" class="btn-action bg-white text-black hover:bg-gray-200">CREAR TIENDA</a>
+                    <a href="https://wa.me/593960761791?text=Me%20interesa%20E-Commerce" target="_blank"
+                        rel="noopener noreferrer" class="btn-action bg-white text-black hover:bg-gray-200">CREAR
+                        TIENDA</a>
                 </div>
             </div>
 
             <!-- Guarantee Section -->
             <div class="mt-20 max-w-5xl mx-auto relative z-10 px-4">
                 <div class="text-center mb-10">
-                    <h3 class="text-xl font-heading font-bold text-white tracking-widest uppercase border-b border-white/10 pb-4 inline-block">GARANTÍA DE SERVICIO PROFESIONAL</h3>
+                    <h3
+                        class="text-xl font-heading font-bold text-white tracking-widest uppercase border-b border-white/10 pb-4 inline-block">
+                        GARANTÍA DE SERVICIO PROFESIONAL</h3>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-8 mb-12">
                     <!-- Card 1 -->
-                    <div class="glass-card p-8 rounded-2xl flex items-start gap-6 border border-white/10 hover:border-brand-cyan/50 transition-all group bg-white/5 hover:bg-white/10">
-                        <div class="text-5xl group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg">🔐</div>
+                    <div
+                        class="glass-card p-8 rounded-2xl flex items-start gap-6 border border-white/10 hover:border-brand-cyan/50 transition-all group bg-white/5 hover:bg-white/10">
+                        <div
+                            class="text-5xl group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg">
+                            🔐</div>
                         <div>
                             <h4 class="font-bold text-white text-lg mb-3 font-heading">Sin Letras Pequeñas</h4>
                             <p class="text-sm text-gray-300 leading-relaxed">
-                                Incluimos el Hosting y el Dominio <strong class="text-brand-cyan">a TU nombre</strong>. Eres dueño absoluto de tu web sin depender de terceros ni pagar rentas ocultas.
+                                Incluimos el Hosting y el Dominio <strong class="text-brand-cyan">a TU nombre</strong>.
+                                Eres dueño absoluto de tu web sin depender de terceros ni pagar rentas ocultas.
                             </p>
                         </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="glass-card p-8 rounded-2xl flex items-start gap-6 border border-white/10 hover:border-brand-cyan/50 transition-all group bg-white/5 hover:bg-white/10">
-                        <div class="text-5xl group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg">🏷️</div>
+                    <div
+                        class="glass-card p-8 rounded-2xl flex items-start gap-6 border border-white/10 hover:border-brand-cyan/50 transition-all group bg-white/5 hover:bg-white/10">
+                        <div
+                            class="text-5xl group-hover:scale-110 transition-transform duration-300 filter drop-shadow-lg">
+                            🏷️</div>
                         <div>
                             <h4 class="font-bold text-white text-lg mb-3 font-heading">Mejoramos tu Presupuesto</h4>
                             <p class="text-sm text-gray-300 leading-relaxed">
-                                Si tienes una cotización de otra agencia, envíanosla. <strong class="text-brand-cyan">Mejoramos el precio</strong> o la calidad técnica garantizado.
+                                Si tienes una cotización de otra agencia, envíanosla. <strong
+                                    class="text-brand-cyan">Mejoramos el precio</strong> o la calidad técnica
+                                garantizado.
                             </p>
                         </div>
                     </div>
@@ -243,11 +471,13 @@
 
                 <!-- Tech CTA -->
                 <div class="text-center">
-                    <a href="https://wa.me/593960761791?text=Hola%2C%20tengo%20una%20cotizaci%C3%B3n%20de%20otra%20agencia%20y%20quisiera%20comparar." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                    <a href="https://wa.me/593960761791?text=Hola%2C%20tengo%20una%20cotizaci%C3%B3n%20de%20otra%20agencia%20y%20quisiera%20comparar."
+                        target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                         <div class="dot"></div>
                         <span class="text-sm tracking-wide">
                             ¿TIENES UNA OFERTA DE OTRO LADO? HABLEMOS AQUÍ
-                            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1 ml-2"></i>
+                            <i data-lucide="arrow-right"
+                                class="w-4 h-4 transition-transform group-hover:translate-x-1 ml-2"></i>
                         </span>
                     </a>
                 </div>
@@ -257,48 +487,65 @@
         <!-- 2. SOCIAL MEDIA SECTION -->
         <div id="tab-content-social" class="relative w-full hidden">
             <div class="plan-overlay" id="overlay-social"><canvas id="canvas-social"></canvas></div>
-            
+
             <div class="grid md:grid-cols-3 gap-8 relative z-10 max-w-6xl mx-auto">
                 <!-- Start Social -->
                 <div class="custom-card social-card social-card-1 p-8 rounded-2xl flex flex-col">
                     <h3 class="text-xl font-bold text-cyan-400 mb-2 font-heading">START</h3>
                     <div class="text-sm text-gray-400 mb-4">Presencia Digital</div>
-                    <div class="text-4xl font-heading font-bold mb-2 text-white">$99<span class="text-sm font-normal text-gray-500">/mes</span></div>
+                    <div class="text-4xl font-heading font-bold mb-2 text-white">$99<span
+                            class="text-sm font-normal text-gray-500">/mes</span></div>
                     <ul class="space-y-4 text-sm text-gray-300 mb-8 flex-1 mt-6">
-                        <li class="flex gap-2"><span class="text-cyan-400">›</span> <strong>8 Diseños Pro</strong> (2 x semana)</li>
+                        <li class="flex gap-2"><span class="text-cyan-400">›</span> <strong>8 Diseños Pro</strong> (2 x
+                            semana)</li>
                         <li class="flex gap-2"><span class="text-cyan-400">›</span> Redacción de textos (Copy)</li>
                         <li class="flex gap-2"><span class="text-cyan-400">›</span> Programación de posts</li>
                     </ul>
-                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Social%20Start" target="_blank" rel="noopener noreferrer" class="btn-action border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black">SOLICITAR</a>
+                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Social%20Start" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-action border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black">SOLICITAR</a>
                 </div>
 
                 <!-- Growth Social -->
                 <div class="custom-card social-card social-card-2 p-8 rounded-2xl flex flex-col transform scale-105">
-                    <div class="absolute top-0 left-0 w-full bg-purple-600 text-white text-xs font-bold text-center py-1 tracking-widest">RECOMENDADO</div>
+                    <div
+                        class="absolute top-0 left-0 w-full bg-purple-600 text-white text-xs font-bold text-center py-1 tracking-widest">
+                        RECOMENDADO</div>
                     <h3 class="text-xl font-bold text-white mb-2 font-heading mt-4">GROWTH</h3>
                     <div class="text-sm text-gray-400 mb-4">Crecimiento de Marca</div>
-                    <div class="text-4xl font-heading font-bold mb-2 text-white">$250<span class="text-sm font-normal text-gray-500">/mes</span></div>
+                    <div class="text-4xl font-heading font-bold mb-2 text-white">$250<span
+                            class="text-sm font-normal text-gray-500">/mes</span></div>
                     <ul class="space-y-4 text-sm text-gray-300 mb-8 flex-1 mt-6">
-                        <li class="flex gap-2"><span class="text-purple-400">✓</span> <strong>12 Publicaciones</strong> (3 x semana)</li>
-                        <li class="flex gap-2"><span class="text-purple-400">✓</span> <strong>2 REELS</strong> (Videos cortos)</li>
+                        <li class="flex gap-2"><span class="text-purple-400">✓</span> <strong>12 Publicaciones</strong>
+                            (3 x semana)</li>
+                        <li class="flex gap-2"><span class="text-purple-400">✓</span> <strong>2 REELS</strong> (Videos
+                            cortos)</li>
                         <li class="flex gap-2"><span class="text-purple-400">✓</span> Historias de interacción</li>
                         <li class="flex gap-2"><span class="text-purple-400">✓</span> Respuesta a comentarios</li>
                     </ul>
-                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Social%20Growth" target="_blank" rel="noopener noreferrer" class="btn-action social-btn-2 shadow-lg shadow-purple-900/50">IMPULSAR MARCA</a>
+                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Social%20Growth" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-action social-btn-2 shadow-lg shadow-purple-900/50">IMPULSAR MARCA</a>
                 </div>
 
                 <!-- Authority Social -->
                 <div class="custom-card social-card social-card-3 p-8 rounded-2xl flex flex-col">
                     <h3 class="text-xl font-bold text-amber-500 mb-2 font-heading">AUTHORITY</h3>
                     <div class="text-sm text-gray-400 mb-4">Dominio de Mercado</div>
-                    <div class="text-4xl font-heading font-bold mb-2 text-white">$450<span class="text-sm font-normal text-gray-500">/mes</span></div>
+                    <div class="text-4xl font-heading font-bold mb-2 text-white">$450<span
+                            class="text-sm font-normal text-gray-500">/mes</span></div>
                     <ul class="space-y-4 text-sm text-gray-300 mb-8 flex-1 mt-6">
-                        <li class="flex gap-2"><span class="text-amber-500">★</span> <strong>15 Publicaciones</strong> Mixtas</li>
-                        <li class="flex gap-2"><span class="text-amber-500">★</span> <strong>4 REELS</strong> (Edición Pro)</li>
-                        <li class="flex gap-2"><span class="text-amber-500">★</span> <strong>Gestión de Ads</strong></li>
+                        <li class="flex gap-2"><span class="text-amber-500">★</span> <strong>15 Publicaciones</strong>
+                            Mixtas</li>
+                        <li class="flex gap-2"><span class="text-amber-500">★</span> <strong>4 REELS</strong> (Edición
+                            Pro)</li>
+                        <li class="flex gap-2"><span class="text-amber-500">★</span> <strong>Gestión de Ads</strong>
+                        </li>
                         <li class="flex gap-2"><span class="text-amber-500">★</span> Reunión Mensual</li>
                     </ul>
-                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Social%20Authority" target="_blank" rel="noopener noreferrer" class="btn-action bg-gradient-to-r from-amber-500 to-orange-600 text-black hover:to-amber-400">DOMINAR</a>
+                    <a href="https://wa.me/593960761791?text=Me%20interesa%20Social%20Authority" target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn-action bg-gradient-to-r from-amber-500 to-orange-600 text-black hover:to-amber-400">DOMINAR</a>
                 </div>
             </div>
         </div>
@@ -306,41 +553,57 @@
         <!-- 3. PACKS SECTION -->
         <div id="tab-content-packs" class="relative w-full hidden">
             <div class="plan-overlay" id="overlay-packs"><canvas id="canvas-packs"></canvas></div>
-            
+
             <div class="grid md:grid-cols-3 gap-8 relative z-10 max-w-6xl mx-auto">
                 <!-- Pack Inicio -->
                 <div class="custom-card pack-card p-0 rounded-2xl flex flex-col overflow-hidden">
                     <div class="pack-savings">AHORRO: $49 USD</div>
                     <div class="p-8 flex flex-col flex-1">
-                        <div class="pack-gift"><i data-lucide="gift" class="w-4 h-4"></i> Hosting y Dominio Incluido</div>
+                        <div class="pack-gift"><i data-lucide="gift" class="w-4 h-4"></i> Hosting y Dominio Incluido
+                        </div>
                         <h3 class="text-xl font-bold text-white mb-2 font-heading text-center">PACK INICIO</h3>
                         <div class="text-4xl font-heading font-bold mb-2 text-white text-center">$210</div>
                         <div class="text-sm text-gray-400 mb-6 text-center">Pago Único</div>
                         <div class="h-px bg-white/10 w-full mb-6"></div>
                         <ul class="space-y-3 text-sm text-gray-300 mb-8 flex-1">
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Web Landing Page</li>
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> <strong>1 Mes Redes</strong></li>
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Logo Básico</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Web Landing
+                                Page</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> <strong>1
+                                    Mes Redes</strong></li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> Logo Básico
+                            </li>
                         </ul>
-                        <a href="https://wa.me/593960761791?text=Me%20interesa%20Pack%20Inicio" target="_blank" rel="noopener noreferrer" class="btn-action border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black">SOLICITAR PACK</a>
+                        <a href="https://wa.me/593960761791?text=Me%20interesa%20Pack%20Inicio" target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-action border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black">SOLICITAR
+                            PACK</a>
                     </div>
                 </div>
 
                 <!-- Pack Negocio Pro -->
-                <div class="custom-card pack-card p-0 rounded-2xl flex flex-col overflow-hidden transform scale-105 border-purple-500">
-                    <div class="pack-savings bg-gradient-to-r from-purple-600 to-pink-600 text-white">AHORRO: $120 USD</div>
+                <div
+                    class="custom-card pack-card p-0 rounded-2xl flex flex-col overflow-hidden transform scale-105 border-purple-500">
+                    <div class="pack-savings bg-gradient-to-r from-purple-600 to-pink-600 text-white">AHORRO: $120 USD
+                    </div>
                     <div class="p-8 flex flex-col flex-1 bg-purple-900/20">
-                        <div class="pack-gift border-purple-500 text-purple-400 bg-purple-500/10"><i data-lucide="key" class="w-4 h-4"></i> Web 100% Tuya</div>
+                        <div class="pack-gift border-purple-500 text-purple-400 bg-purple-500/10"><i data-lucide="key"
+                                class="w-4 h-4"></i> Web 100% Tuya</div>
                         <h3 class="text-xl font-bold text-white mb-2 font-heading text-center">NEGOCIO PRO</h3>
                         <div class="text-4xl font-heading font-bold mb-2 text-white text-center">$450</div>
                         <div class="text-sm text-gray-400 mb-6 text-center">Inversión Única</div>
                         <div class="h-px bg-white/10 w-full mb-6"></div>
                         <ul class="space-y-3 text-sm text-gray-300 mb-8 flex-1">
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Web Profesional</li>
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> <strong>1 Mes Growth</strong></li>
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> SEO + Google Maps</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Web
+                                Profesional</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> <strong>1
+                                    Mes Growth</strong></li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> SEO +
+                                Google Maps</li>
                         </ul>
-                        <a href="https://wa.me/593960761791?text=Me%20interesa%20Pack%20Negocio%20Pro" target="_blank" rel="noopener noreferrer" class="btn-action bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/30">IMPULSAR MARCA</a>
+                        <a href="https://wa.me/593960761791?text=Me%20interesa%20Pack%20Negocio%20Pro" target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-action bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/30">IMPULSAR
+                            MARCA</a>
                     </div>
                 </div>
 
@@ -348,47 +611,65 @@
                 <div class="custom-card pack-card p-0 rounded-2xl flex flex-col overflow-hidden">
                     <div class="pack-savings">AHORRO: $200 USD</div>
                     <div class="p-8 flex flex-col flex-1">
-                        <div class="pack-gift border-amber-500 text-amber-500 bg-amber-500/10"><i data-lucide="briefcase" class="w-4 h-4"></i> Proyecto "Llave en Mano"</div>
+                        <div class="pack-gift border-amber-500 text-amber-500 bg-amber-500/10"><i
+                                data-lucide="briefcase" class="w-4 h-4"></i> Proyecto "Llave en Mano"</div>
                         <h3 class="text-xl font-bold text-white mb-2 font-heading text-center">CORPORATIVO</h3>
                         <div class="text-4xl font-heading font-bold mb-2 text-white text-center">$800</div>
                         <div class="text-sm text-gray-400 mb-6 text-center">Solución Total</div>
                         <div class="h-px bg-white/10 w-full mb-6"></div>
                         <ul class="space-y-3 text-sm text-gray-300 mb-8 flex-1">
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> E-Commerce Completo</li>
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> <strong>1 Mes Authority</strong></li>
-                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Pasarela de Pagos</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> E-Commerce
+                                Completo</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> <strong>1
+                                    Mes Authority</strong></li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Pasarela
+                                de Pagos</li>
                         </ul>
-                        <a href="https://wa.me/593960761791?text=Me%20interesa%20Pack%20Corporativo" target="_blank" rel="noopener noreferrer" class="btn-action border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-black">PROYECTO COMPLETO</a>
+                        <a href="https://wa.me/593960761791?text=Me%20interesa%20Pack%20Corporativo" target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-action border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-black">PROYECTO
+                            COMPLETO</a>
                     </div>
                 </div>
             </div>
 
             <!-- Intellectual Property Guarantee -->
             <div class="mt-16 max-w-4xl mx-auto relative z-10 px-4">
-                <div class="glass-card p-10 rounded-2xl border border-white/10 bg-white/5 text-center relative overflow-hidden group hover:border-brand-cyan/30 transition-all duration-500">
+                <div
+                    class="glass-card p-10 rounded-2xl border border-white/10 bg-white/5 text-center relative overflow-hidden group hover:border-brand-cyan/30 transition-all duration-500">
                     <!-- Glow Effect -->
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 bg-brand-blue/20 blur-[80px] rounded-full pointer-events-none"></div>
-                    
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-1/2 bg-brand-blue/20 blur-[80px] rounded-full pointer-events-none">
+                    </div>
+
                     <div class="relative z-10">
-                        <div class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center text-brand-cyan mx-auto mb-6 border border-white/10 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(0,247,255,0.2)]">
+                        <div
+                            class="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center text-brand-cyan mx-auto mb-6 border border-white/10 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_20px_rgba(0,247,255,0.2)]">
                             <i data-lucide="shield-check" class="w-10 h-10"></i>
                         </div>
-                        
-                        <h3 class="text-2xl md:text-3xl font-heading font-black text-white mb-6 tracking-tight uppercase">
+
+                        <h3
+                            class="text-2xl md:text-3xl font-heading font-black text-white mb-6 tracking-tight uppercase">
                             GARANTÍA DE PROPIEDAD INTELECTUAL
                         </h3>
-                        
+
                         <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
-                            A diferencia de otras agencias, nosotros te entregamos <span class="text-brand-cyan font-bold">las credenciales completas</span> (Hosting, Dominio y CMS). 
-                            La página es <strong class="text-white">100% tuya</strong>. No cobramos alquileres ocultos ni "mantenimientos obligatorios" para que tu web siga online. 
+                            A diferencia de otras agencias, nosotros te entregamos <span
+                                class="text-brand-cyan font-bold">las credenciales completas</span> (Hosting, Dominio y
+                            CMS).
+                            La página es <strong class="text-white">100% tuya</strong>. No cobramos alquileres ocultos
+                            ni "mantenimientos obligatorios" para que tu web siga online.
                             Trabajamos con transparencia total desde Ecuador para el mundo.
                         </p>
 
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20garant%C3%ADa%20de%20propiedad%20intelectual." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group inline-flex">
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20garant%C3%ADa%20de%20propiedad%20intelectual."
+                            target="_blank" rel="noopener noreferrer"
+                            class="interactive-hover-button group inline-flex">
                             <div class="dot"></div>
                             <span class="text-sm tracking-widest font-bold">
                                 HABLEMOS DE MI PROYECTO
-                                <i data-lucide="message-circle" class="w-4 h-4 transition-transform group-hover:translate-x-1 ml-2"></i>
+                                <i data-lucide="message-circle"
+                                    class="w-4 h-4 transition-transform group-hover:translate-x-1 ml-2"></i>
                             </span>
                         </a>
                     </div>
@@ -401,41 +682,88 @@
     <section class="py-20 bg-brand-surface/30">
         <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="text-3xl font-heading font-black text-center mb-12">Preguntas Frecuentes</h2>
-            
+
             <div class="space-y-4">
                 <div class="glass-card p-6 rounded-xl reveal">
                     <h3 class="font-bold text-lg mb-2">¿Hay contrato de permanencia?</h3>
-                    <p class="text-gray-400 text-sm">No. Trabajamos mes a mes. Si no ves resultados, eres libre de irte. Nuestra retención es alta porque damos resultados, no porque obliguemos.</p>
+                    <p class="text-gray-400 text-sm">No. Trabajamos mes a mes. Si no ves resultados, eres libre de irte.
+                        Nuestra retención es alta porque damos resultados, no porque obliguemos.</p>
                 </div>
-                
+
                 <div class="glass-card p-6 rounded-xl reveal delay-100">
                     <h3 class="font-bold text-lg mb-2">¿Qué incluye el diseño "Premium"?</h3>
-                    <p class="text-gray-400 text-sm">Incluye dirección de arte, retoque fotográfico avanzado y animaciones (motion graphics) para tus historias y reels, no solo plantillas estáticas.</p>
+                    <p class="text-gray-400 text-sm">Incluye dirección de arte, retoque fotográfico avanzado y
+                        animaciones (motion graphics) para tus historias y reels, no solo plantillas estáticas.</p>
                 </div>
 
                 <div class="glass-card p-6 rounded-xl reveal delay-200">
                     <h3 class="font-bold text-lg mb-2">¿Cómo funcionan los pagos?</h3>
-                    <p class="text-gray-400 text-sm">Aceptamos transferencia bancaria local o tarjeta de crédito/débito vía link de pago seguro (Stripe/PayPhone). Se abona al inicio del mes de servicio.</p>
+                    <p class="text-gray-400 text-sm">Aceptamos transferencia bancaria local o tarjeta de crédito/débito
+                        vía link de pago seguro (Stripe/PayPhone). Se abona al inicio del mes de servicio.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-black pt-16 pb-8 relative">
-        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]"></div>
+        <div
+            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]">
+        </div>
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <!-- Brand -->
                 <div class="col-span-1 md:col-span-1">
                     <a href="index.html" class="relative w-20 h-20 flex items-center justify-center group mb-6">
-                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
-                        <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
-                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                        </div>
+                        <div
+                            class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON"
+                                width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
                         </div>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Transformamos ideas complejas en productos digitales simples.
                     </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="https://www.facebook.com/profile.php?id=61584513332865"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#1877F2] hover:shadow-[0_0_15px_rgba(24,119,242,0.5)]"
+                            aria-label="Facebook">
+                            <i data-lucide="facebook"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#1877F2] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.instagram.com/adyron8/"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#E4405F] hover:shadow-[0_0_15px_rgba(228,64,95,0.5)]"
+                            aria-label="Instagram">
+                            <i data-lucide="instagram"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#E4405F] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adyron-sitios-web-con-estilos-94966339b/"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#0A66C2] hover:shadow-[0_0_15px_rgba(10,102,194,0.5)]"
+                            aria-label="LinkedIn">
+                            <i data-lucide="linkedin"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#0A66C2] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://x.com/adyronweb"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                            aria-label="X">
+                            <i data-lucide="twitter"
+                                class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@adyronsitioswebsconestilo"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FF0000] hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]"
+                            aria-label="YouTube">
+                            <i data-lucide="youtube"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FF0000] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@adyronsitioswebs"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FE2C55] hover:shadow-[0_0_15px_rgba(254,44,85,0.5)]"
+                            aria-label="TikTok">
+                            <i data-lucide="video"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FE2C55] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Links -->
@@ -444,7 +772,8 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="index.html" class="hover:text-brand-blue transition-colors">Inicio</a></li>
                         <li><a href="servicios.html" class="hover:text-brand-blue transition-colors">Servicios</a></li>
-                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a></li>
+                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a>
+                        </li>
                         <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a></li>
                     </ul>
                 </div>
@@ -454,10 +783,14 @@
                     <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Pagos</h4>
                     <p class="text-gray-400 text-sm mb-2">Paga en CÓMODAS CUOTAS</p>
                     <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
-                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16" loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24" loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16"
+                            loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24"
+                            loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20"
+                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20"
+                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
 
@@ -466,16 +799,20 @@
                     <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Contacto</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li>
-                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </div>
                                 <span>+593 960 761 791</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
                                     <i data-lucide="mail" class="w-4 h-4"></i>
                                 </div>
                                 <span>gerencia@adyronweb.site</span>
@@ -492,31 +829,42 @@
     </footer>
 
     <!-- AI Assistant Chat Widget -->
-    <button id="chatToggle" aria-label="Abrir chat con IA" class="fixed bottom-6 right-6 z-50 bg-brand-blue hover:bg-blue-600 text-white w-16 h-16 rounded-full shadow-[0_0_30px_rgba(0,54,255,0.4)] transition-all hover:scale-110 group flex items-center justify-center overflow-hidden border-2 border-white/20">
+    <button id="chatToggle" aria-label="Abrir chat con IA"
+        class="fixed bottom-6 right-6 z-50 bg-brand-blue hover:bg-blue-600 text-white w-16 h-16 rounded-full shadow-[0_0_30px_rgba(0,54,255,0.4)] transition-all hover:scale-110 group flex items-center justify-center overflow-hidden border-2 border-white/20">
         <span class="absolute top-1 right-1 flex h-4 w-4 z-20">
             <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
             <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 border border-black"></span>
         </span>
-        <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="Asistente ADYRON" width="64" height="64" class="w-full h-full object-cover relative z-10">
+        <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="Asistente ADYRON" width="64" height="64"
+            class="w-full h-full object-cover relative z-10">
     </button>
 
-    <div id="chatBox" class="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[350px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl hidden z-50 flex flex-col backdrop-blur-xl transition-all duration-300 transform translate-y-10 opacity-0">
-        <div class="p-4 border-b border-white/10 flex justify-between items-center bg-gradient-to-r from-brand-blue/20 to-transparent rounded-t-2xl">
+    <div id="chatBox"
+        class="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[350px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl hidden z-50 flex flex-col backdrop-blur-xl transition-all duration-300 transform translate-y-10 opacity-0">
+        <div
+            class="p-4 border-b border-white/10 flex justify-between items-center bg-gradient-to-r from-brand-blue/20 to-transparent rounded-t-2xl">
             <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shadow-lg shadow-brand-blue/30 overflow-hidden">
-                    <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="AI" width="40" height="40" class="w-full h-full object-cover">
+                <div
+                    class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shadow-lg shadow-brand-blue/30 overflow-hidden">
+                    <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="AI" width="40" height="40"
+                        class="w-full h-full object-cover">
                 </div>
                 <div>
                     <span class="font-bold text-white block leading-tight">ADYRON AI</span>
-                    <span class="text-xs text-green-400 flex items-center gap-1"><span class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> En línea</span>
+                    <span class="text-xs text-green-400 flex items-center gap-1"><span
+                            class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> En línea</span>
                 </div>
             </div>
-            <button id="closeChat" aria-label="Cerrar chat" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="x" class="w-5 h-5"></i></button>
+            <button id="closeChat" aria-label="Cerrar chat" class="text-gray-400 hover:text-white transition-colors"><i
+                    data-lucide="x" class="w-5 h-5"></i></button>
         </div>
-        
-        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 space-y-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
+
+        <div id="chatMessages"
+            class="flex-1 overflow-y-auto p-4 space-y-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
             <div id="typing" class="hidden mb-4 flex gap-3">
-                <div class="w-8 h-8 rounded-full bg-brand-blue/50 flex-shrink-0 flex items-center justify-center text-xs">...</div>
+                <div
+                    class="w-8 h-8 rounded-full bg-brand-blue/50 flex-shrink-0 flex items-center justify-center text-xs">
+                    ...</div>
                 <div class="bg-white/10 px-4 py-3 rounded-2xl rounded-tl-none flex gap-1 items-center h-10">
                     <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
                     <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-100"></span>
@@ -527,8 +875,11 @@
 
         <div class="p-4 border-t border-white/10 bg-black/20">
             <div class="flex gap-2 relative">
-                <input type="text" id="userInput" class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-brand-blue focus:bg-white/10 transition-all placeholder-gray-500" placeholder="Escribe tu mensaje...">
-                <button id="sendBtn" aria-label="Enviar mensaje" class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-blue p-2 rounded-lg hover:bg-blue-600 transition-colors text-white shadow-lg shadow-brand-blue/20">
+                <input type="text" id="userInput"
+                    class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-brand-blue focus:bg-white/10 transition-all placeholder-gray-500"
+                    placeholder="Escribe tu mensaje...">
+                <button id="sendBtn" aria-label="Enviar mensaje"
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-blue p-2 rounded-lg hover:bg-blue-600 transition-colors text-white shadow-lg shadow-brand-blue/20">
                     <i data-lucide="send" class="w-4 h-4"></i>
                 </button>
             </div>
@@ -540,27 +891,36 @@
 
     <!-- Contact Modal (Brief Empresarial) -->
     <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()"></div>
-        <div class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()">
+        </div>
+        <div
+            class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
             <div class="p-6 border-b border-white/10 flex justify-between items-center">
                 <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
-                <button onclick="closeContactModal()" aria-label="Cerrar modal" class="text-gray-400 hover:text-white transition-colors">
+                <button onclick="closeContactModal()" aria-label="Cerrar modal"
+                    class="text-gray-400 hover:text-white transition-colors">
                     <i data-lucide="x" class="w-6 h-6"></i>
                 </button>
             </div>
             <div class="p-6 overflow-y-auto">
                 <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Nombre Completo</label>
-                        <input type="text" id="briefName" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <label for="briefName" class="block text-sm font-medium text-gray-400 mb-1">Nombre
+                            Completo</label>
+                        <input type="text" id="briefName" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Empresa / Marca</label>
-                        <input type="text" id="briefCompany" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <label for="briefCompany" class="block text-sm font-medium text-gray-400 mb-1">Empresa /
+                            Marca</label>
+                        <input type="text" id="briefCompany" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Servicio de Interés</label>
-                        <select id="briefService" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <label for="briefService" class="block text-sm font-medium text-gray-400 mb-1">Servicio de
+                            Interés</label>
+                        <select id="briefService"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
                             <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
                             <option value="E-commerce" class="bg-black">E-commerce</option>
                             <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
@@ -570,10 +930,14 @@
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Detalles del Proyecto</label>
-                        <textarea id="briefDetails" rows="3" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+                        <label for="briefDetails" class="block text-sm font-medium text-gray-400 mb-1">Detalles del
+                            Proyecto</label>
+                        <textarea id="briefDetails" rows="3"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors"
+                            placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                    <button type="submit"
+                        class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
                         <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
                     </button>
                 </form>
@@ -583,7 +947,7 @@
 
     <script>
         lucide.createIcons();
-        
+
         document.getElementById('chatToggle').addEventListener('click', () => {
             const chat = document.getElementById('chatBox');
             if (!chat.classList.contains('hidden')) {
@@ -619,63 +983,19 @@
             if (tabName === 'social' && window.initSocialBg) initSocialBg('overlay-social', 'canvas-social');
             if (tabName === 'packs' && window.initVipBg) initVipBg('overlay-packs', 'canvas-packs');
         }
-        
+
         // Init default background
         document.addEventListener('DOMContentLoaded', () => {
             if (window.initWebDevBg) initWebDevBg('overlay-web', 'canvas-web');
         });
     </script>
+    <!-- Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
+    <link href="./src/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
-        // Tailwind Config Fallback
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            blue: '#0036FF',
-                            dark: '#020202',
-                            surface: '#0A0A0A',
-                            bg: '#020617',
-                            cyan: '#00f7ff',
-                            dim: '#64748B',
-                            gray: '#888888',
-                            light: '#F3F3F3'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter Tight', 'Inter', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                        display: ['Orbitron', 'sans-serif'],
-                        ui: ['Poppins', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'neon': '0 0 15px rgba(0, 54, 255, 0.2)',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-glow': 'pulseGlow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'infinite-scroll-up': 'scrollUp 30s linear infinite',
-                        'infinite-scroll-down': 'scrollDown 35s linear infinite',
-                        'border-pulse': 'borderPulse 3s infinite',
-                        'text-flow': 'textFlow 5s ease infinite',
-                        'grid-flow': 'gridFlow 4s linear infinite',
-                        'blob': 'blob 7s infinite',
-                        'modal-in': 'modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
-                    },
-                    keyframes: {
-                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-20px)' } },
-                        pulseGlow: { '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(0, 54, 255, 0.2)' }, '50%': { opacity: '.8', boxShadow: '0 0 40px rgba(0, 54, 255, 0.5)' } },
-                        borderPulse: { '0%, 100%': { borderColor: 'rgba(255, 255, 255, 0.1)' }, '50%': { borderColor: '#0036FF', boxShadow: '0 0 20px rgba(0, 54, 255, 0.4)' } },
-                        scrollUp: { '0%': { transform: 'translateY(0)' }, '100%': { transform: 'translateY(-50%)' } },
-                        scrollDown: { '0%': { transform: 'translateY(-50%)' }, '100%': { transform: 'translateY(0)' } },
-                        textFlow: { '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' }, '50%': { 'background-size': '200% 200%', 'background-position': 'right center' } },
-                        gridFlow: { '0%': { backgroundPosition: '0 0' }, '100%': { backgroundPosition: '0 4rem' } },
-                        blob: { '0%': { transform: 'translate(0px, 0px) scale(1)' }, '33%': { transform: 'translate(30px, -50px) scale(1.1)' }, '66%': { transform: 'translate(-20px, 20px) scale(0.9)' }, '100%': { transform: 'translate(0px, 0px) scale(1)' } },
-                        modalIn: { from: { opacity: '0', transform: 'scale(0.95) translateY(20px)' }, to: { opacity: '1', transform: 'scale(1) translateY(0)' } }
-                    }
-                }
-            }
-        }
+        lucide.createIcons();
     </script>
 </body>
+
 </html>

@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Portafolio de Proyectos | ADYRON Agencia Digital Ecuador</title>
-    <meta name="description" content="Explora nuestro portafolio de desarrollo web profesional y diseño de páginas web empresariales en Ecuador. Casos de éxito en sitios web corporativos, SaaS y E-commerce.">
-    
+    <meta name="description"
+        content="Explora nuestro portafolio de desarrollo web profesional y diseño de páginas web empresariales en Ecuador. Casos de éxito en sitios web corporativos, SaaS y E-commerce.">
+
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" type="image/png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Inter+Tight:wght@400;500;600&family=Montserrat:wght@400;600;700;800;900&family=Orbitron:wght@500;700;900&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,8 +26,12 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        body { background-color: #020202; color: #ffffff; overflow-x: hidden; }
-        
+        body {
+            background-color: #020202;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
@@ -31,15 +39,24 @@
             transition: all 0.4s ease;
             overflow: hidden;
         }
+
         .glass-card:hover {
             border-color: rgba(0, 54, 255, 0.5);
             background: rgba(255, 255, 255, 0.05);
             transform: translateY(-10px);
             box-shadow: 0 20px 40px -10px rgba(0, 54, 255, 0.2);
         }
-        
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* Interactive Hover Button (Tech Effect) */
         .interactive-hover-button {
@@ -60,43 +77,146 @@
             backdrop-filter: blur(10px);
             width: 100%;
         }
-        .interactive-hover-button:hover { border-color: #0036FF; box-shadow: 0 0 20px rgba(0, 54, 255, 0.3); }
-        .interactive-hover-button .dot { position: absolute; top: 50%; left: 50%; width: 300%; padding-bottom: 300%; border-radius: 50%; background-color: #0036FF; transform: translate(-50%, -50%) scale(0); transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); z-index: 0; }
-        .interactive-hover-button:hover .dot { transform: translate(-50%, -50%) scale(1); }
-        .interactive-hover-button span { position: relative; z-index: 1; display: flex; align-items: center; gap: 0.5rem; justify-content: center; }
+
+        .interactive-hover-button:hover {
+            border-color: #0036FF;
+            box-shadow: 0 0 20px rgba(0, 54, 255, 0.3);
+        }
+
+        .interactive-hover-button .dot {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            padding-bottom: 300%;
+            border-radius: 50%;
+            background-color: #0036FF;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 0;
+        }
+
+        .interactive-hover-button:hover .dot {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .interactive-hover-button span {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
 
         /* Modal Styles */
-        .modal-open { overflow: hidden; }
-        @keyframes modalIn {
-            from { opacity: 0; transform: scale(0.95) translateY(20px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
+        .modal-open {
+            overflow: hidden;
         }
-        .animate-modal-in { animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .animate-modal-in {
+            animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
 
         @media (prefers-reduced-motion: reduce) {
-            *, ::before, ::after {
+
+            *,
+            ::before,
+            ::after {
                 animation-duration: 0.01ms !important;
                 animation-iteration-count: 1 !important;
                 transition-duration: 0.01ms !important;
                 scroll-behavior: auto !important;
             }
-            .reveal { opacity: 1 !important; transform: none !important; }
+
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
+    <style>
+        /* --- PREMIUM TECH BUTTON --- */
+        .btn-tech-glow {
+            position: relative;
+            background: rgba(0, 30, 255, 0.1);
+            color: #00f7ff;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 1px solid #00f7ff;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            box-shadow: 0 0 10px rgba(0, 247, 255, 0.2), inset 0 0 10px rgba(0, 247, 255, 0.1);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-tech-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.4), transparent);
+            transition: 0.5s;
+            z-index: -1;
+            transform: skewX(-25deg);
+        }
+
+        .btn-tech-glow:hover {
+            color: #fff;
+            background: #0036FF;
+            box-shadow: 0 0 30px #00f7ff, 0 0 60px #0036FF;
+            border-color: #fff;
+            transform: translateY(-2px) scale(1.05);
+            text-shadow: 0 0 5px #fff;
+        }
+
+        .btn-tech-glow:hover::before {
+            left: 100%;
+            transition: 0.5s;
         }
     </style>
 </head>
+
 <body class="antialiased selection:bg-brand-blue selection:text-white">
 
     <!-- Navigation -->
     <nav id="main-header" class="fixed w-full z-50 top-0 transition-all duration-300 border-b border-transparent">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="relative w-14 h-14 flex items-center justify-center group">
-                <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]"></div>
-                <div class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
-                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40" height="40" class="w-10 h-10 object-contain p-0.5">
+                <div
+                    class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                </div>
+                <div
+                    class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                    <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON" width="40"
+                        height="40" class="w-10 h-10 object-contain p-0.5">
                 </div>
             </a>
-            
+
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
                 <a href="index.html" class="hover:text-white transition-colors">Inicio</a>
                 <a href="servicios.html" class="hover:text-white transition-colors">Servicios</a>
@@ -104,38 +224,50 @@
                 <a href="planes.html" class="hover:text-white transition-colors">Planes</a>
                 <a href="nosotros.html" class="hover:text-white transition-colors">Nosotros</a>
                 <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
-                <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue hover:bg-blue-700 text-white px-5 py-2 rounded-full transition-all">Contacto</a>
+                <a href="#" onclick="openContactModal(); return false;"
+                    class="btn-tech-glow px-6 py-2 rounded-full text-sm group">
+                    <span>Contacto</span>
+                    <i data-lucide="zap" class="w-4 h-4 ml-2 group-hover:text-white transition-colors"></i>
+                </a>
             </div>
 
-            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50" aria-label="Abrir menú">
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none relative z-50"
+                aria-label="Abrir menú">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
                 </svg>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
+
+        <div id="mobile-menu"
+            class="hidden fixed inset-0 w-full h-[100dvh] bg-black p-8 pt-28 flex flex-col gap-8 md:hidden z-40 overflow-y-auto overscroll-contain">
             <a href="index.html" class="text-lg font-medium text-white">Inicio</a>
             <a href="servicios.html" class="text-lg font-medium text-gray-300">Servicios</a>
             <a href="portafolio.html" class="text-lg font-medium text-white">Portafolio</a>
             <a href="planes.html" class="text-lg font-medium text-gray-300">Planes</a>
             <a href="nosotros.html" class="text-lg font-medium text-gray-300">Nosotros</a>
             <a href="blog.html" class="text-lg font-medium text-gray-300">Blog</a>
-            <a href="#" onclick="openContactModal(); return false;" class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
+            <a href="#" onclick="openContactModal(); return false;"
+                class="bg-brand-blue py-3 rounded-xl text-center font-bold flex justify-center items-center gap-2 text-white">Contacto</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="pt-40 pb-16 relative overflow-hidden text-center px-6">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl -z-10 opacity-20 pointer-events-none">
-            <div class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-[120px]"></div>
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl -z-10 opacity-20 pointer-events-none">
+            <div
+                class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-[120px]">
+            </div>
         </div>
-        
+
         <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-6 reveal">
             RESULTADOS QUE <br> <span class="text-brand-blue">TRANSFORMAN NEGOCIOS</span>
         </h1>
         <p class="text-gray-400 max-w-2xl mx-auto text-lg reveal delay-100 leading-relaxed">
-            Explora nuestra selección de proyectos donde la estrategia, el diseño y la tecnología convergen. No hacemos sitios web, construimos activos digitales que facturan.
+            Explora nuestra selección de proyectos donde la estrategia, el diseño y la tecnología convergen. No hacemos
+            sitios web, construimos activos digitales que facturan.
         </p>
     </section>
 
@@ -143,27 +275,33 @@
     <section class="py-12 pb-24 bg-brand-surface/30">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <!-- Project 1 -->
                 <div class="glass-card rounded-2xl group reveal">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(0)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(0)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/MxD4H9JN/1.jpg" alt="Proyecto 1" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/1.jpg" alt="Proyecto 1" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Plataforma Web SaaS Contable</h3>
-                        <p class="text-gray-400 text-sm mb-6">Landing page corporativa optimizada para conversión y captación de leads en el sector contable ecuatoriano.</p>
-                        
+                        <p class="text-gray-400 text-sm mb-6">Landing page corporativa optimizada para conversión y
+                            captación de leads en el sector contable ecuatoriano.</p>
+
                         <div class="flex flex-col gap-3">
-                            <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20SaaS%20Contable%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                            <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20SaaS%20Contable%20en%20su%20portafolio%20y%20me%20interesa."
+                                target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                                 <div class="dot"></div>
                                 <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                             </a>
-                            <a href="https://www.saf-telmah.com/" target="_blank" class="text-center text-xs font-bold text-brand-cyan hover:text-white transition-colors border border-brand-cyan/30 rounded-lg py-2 hover:bg-brand-cyan/10">
+                            <a href="https://www.saf-telmah.com/" target="_blank"
+                                class="text-center text-xs font-bold text-brand-cyan hover:text-white transition-colors border border-brand-cyan/30 rounded-lg py-2 hover:bg-brand-cyan/10">
                                 VISITAR WEB REAL
                             </a>
                         </div>
@@ -173,17 +311,22 @@
                 <!-- Project 2 -->
                 <div class="glass-card rounded-2xl group reveal delay-100">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(1)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(1)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/svLYLRrC/2.jpg" alt="Proyecto 2" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/2.jpg" alt="Proyecto 2" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Web Corporativa Industrial</h3>
-                        <p class="text-gray-400 text-sm mb-6">Sitio web empresarial enfocado en presentación profesional de soluciones de purificación de agua.</p>
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Web%20Industrial%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                        <p class="text-gray-400 text-sm mb-6">Sitio web empresarial enfocado en presentación profesional
+                            de soluciones de purificación de agua.</p>
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Web%20Industrial%20en%20su%20portafolio%20y%20me%20interesa."
+                            target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                             <div class="dot"></div>
                             <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                         </a>
@@ -193,17 +336,22 @@
                 <!-- Project 3 -->
                 <div class="glass-card rounded-2xl group reveal delay-200">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(2)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(2)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/pB7Nzjpd/3.jpg" alt="Proyecto 3" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/3.jpg" alt="Proyecto 3" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Plataforma Institucional</h3>
-                        <p class="text-gray-400 text-sm mb-6">Web informativa moderna para organización cristiana con enfoque comunitario y accesibilidad.</p>
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Plataforma%20Institucional%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                        <p class="text-gray-400 text-sm mb-6">Web informativa moderna para organización cristiana con
+                            enfoque comunitario y accesibilidad.</p>
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Plataforma%20Institucional%20en%20su%20portafolio%20y%20me%20interesa."
+                            target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                             <div class="dot"></div>
                             <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                         </a>
@@ -213,17 +361,22 @@
                 <!-- Project 4 -->
                 <div class="glass-card rounded-2xl group reveal">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(3)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(3)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/B2Gt11Rk/4.jpg" alt="Proyecto 4" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/4.jpg" alt="Proyecto 4" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Tienda Online Comercial</h3>
-                        <p class="text-gray-400 text-sm mb-6">Plataforma e-commerce optimizada para experiencia de compra digital y campañas promocionales.</p>
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20E-commerce%20Mascotas%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                        <p class="text-gray-400 text-sm mb-6">Plataforma e-commerce optimizada para experiencia de
+                            compra digital y campañas promocionales.</p>
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20E-commerce%20Mascotas%20en%20su%20portafolio%20y%20me%20interesa."
+                            target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                             <div class="dot"></div>
                             <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                         </a>
@@ -233,17 +386,22 @@
                 <!-- Project 5 -->
                 <div class="glass-card rounded-2xl group reveal delay-100">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(4)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(4)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/RkVdYQBR/5.jpg" alt="Proyecto 5" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/5.jpg" alt="Proyecto 5" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Web Industrial Corporativa</h3>
-                        <p class="text-gray-400 text-sm mb-6">Sitio empresarial enfocado en imagen institucional y captación de clientes B2B.</p>
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Industrial%20Corporativo%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                        <p class="text-gray-400 text-sm mb-6">Sitio empresarial enfocado en imagen institucional y
+                            captación de clientes B2B.</p>
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Industrial%20Corporativo%20en%20su%20portafolio%20y%20me%20interesa."
+                            target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                             <div class="dot"></div>
                             <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                         </a>
@@ -253,17 +411,22 @@
                 <!-- Project 6 -->
                 <div class="glass-card rounded-2xl group reveal delay-200">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(5)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(5)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/sdWz1bM5/6.jpg" alt="Proyecto 6" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/6.jpg" alt="Proyecto 6" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Plataforma Médica Digital</h3>
-                        <p class="text-gray-400 text-sm mb-6">Web profesional orientada a reservas de citas y presentación de servicios odontológicos.</p>
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Plataforma%20M%C3%A9dica%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                        <p class="text-gray-400 text-sm mb-6">Web profesional orientada a reservas de citas y
+                            presentación de servicios odontológicos.</p>
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Plataforma%20M%C3%A9dica%20en%20su%20portafolio%20y%20me%20interesa."
+                            target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                             <div class="dot"></div>
                             <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                         </a>
@@ -273,17 +436,22 @@
                 <!-- Project 7 -->
                 <div class="glass-card rounded-2xl group reveal md:col-span-2 lg:col-span-1 lg:col-start-2">
                     <div class="relative h-64 overflow-hidden">
-                        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
-                            <button onclick="openProject(6)" class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
+                        <div
+                            class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 flex items-center justify-center backdrop-blur-[2px]">
+                            <button onclick="openProject(6)"
+                                class="bg-white text-black font-bold py-2 px-6 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 flex items-center gap-2">
                                 <i data-lucide="eye" class="w-4 h-4"></i> Ver Detalles
                             </button>
                         </div>
-                        <img src="https://i.ibb.co/BKFRL8HR/7.jpg" alt="Proyecto 7" loading="lazy" width="600" height="400" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <img src="img/7.jpg" alt="Proyecto 7" loading="lazy" width="600" height="400"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-white mb-2">Web Agroindustrial</h3>
-                        <p class="text-gray-400 text-sm mb-6">Plataforma corporativa enfocada en distribución de productos avícolas y procesos de calidad.</p>
-                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Web%20Agroindustrial%20en%20su%20portafolio%20y%20me%20interesa." target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
+                        <p class="text-gray-400 text-sm mb-6">Plataforma corporativa enfocada en distribución de
+                            productos avícolas y procesos de calidad.</p>
+                        <a href="https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20proyecto%20Web%20Agroindustrial%20en%20su%20portafolio%20y%20me%20interesa."
+                            target="_blank" rel="noopener noreferrer" class="interactive-hover-button group">
                             <div class="dot"></div>
                             <span>QUIERO ALGO ASÍ <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
                         </a>
@@ -294,17 +462,210 @@
         </div>
     </section>
 
-    <!-- Footer (Mismo que index.html) -->
+
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeModal()"></div>
+        <div
+            class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
+
+            <!-- Modal Header -->
+            <div class="absolute top-4 right-4 z-20">
+                <button onclick="closeModal()" aria-label="Cerrar modal"
+                    class="bg-black/50 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md transition-all">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <div class="flex flex-col md:flex-row h-full">
+                <!-- Image Side -->
+                <div class="w-full md:w-1/2 h-64 md:h-auto relative bg-gray-900 group cursor-zoom-in overflow-hidden"
+                    onclick="openFullScreen()">
+                    <img id="modalImage" src="" alt="Project"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300">
+                    </div>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                        <span
+                            class="bg-black/60 text-white px-5 py-2 rounded-full backdrop-blur-md text-sm font-bold flex items-center gap-2 border border-white/10 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all">
+                            <i data-lucide="maximize-2" class="w-4 h-4"></i> Ver Pantalla Completa
+                        </span>
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent md:bg-gradient-to-r pointer-events-none">
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="w-full md:w-1/2 p-8 overflow-y-auto scrollbar-hide">
+                    <div class="mb-6">
+                        <span id="modalIndustry"
+                            class="text-xs font-bold tracking-widest text-brand-cyan uppercase mb-2 block">INDUSTRIA</span>
+                        <h2 id="modalTitle" class="text-3xl font-heading font-black text-white mb-2 leading-tight">
+                            Titulo del Proyecto</h2>
+                        <p id="modalService" class="text-sm text-gray-400 font-medium">Servicio Realizado</p>
+                    </div>
+
+                    <div class="space-y-6 mb-8">
+                        <div>
+                            <h4 class="text-white font-bold mb-2 flex items-center gap-2"><i data-lucide="file-text"
+                                    class="w-4 h-4 text-brand-blue"></i> Descripción</h4>
+                            <p id="modalDesc" class="text-gray-400 text-sm leading-relaxed">Descripción del proyecto...
+                            </p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-white font-bold mb-2 flex items-center gap-2"><i data-lucide="trophy"
+                                    class="w-4 h-4 text-brand-blue"></i> Resultados Clave</h4>
+                            <ul id="modalResults" class="space-y-2 text-sm text-gray-300">
+                                <!-- List items injected via JS -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <a id="modalWhatsapp" href="#" target="_blank" rel="noopener noreferrer"
+                            class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i> COTIZAR PROYECTO SIMILAR
+                        </a>
+                        <a id="modalWebLink" href="#" target="_blank" rel="noopener noreferrer"
+                            class="hidden w-full border border-white/10 hover:bg-white/5 text-white font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="external-link" class="w-5 h-5"></i> VISITAR SITIO WEB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Image Modal -->
+    <div id="fullScreenModal"
+        class="fixed inset-0 z-[70] hidden items-center justify-center bg-black/95 backdrop-blur-2xl transition-all duration-300 opacity-0">
+        <div class="absolute top-6 right-6 z-50">
+            <button onclick="closeFullScreen()" aria-label="Cerrar pantalla completa"
+                class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full backdrop-blur-md transition-all font-bold flex items-center gap-2 border border-white/10 group">
+                <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i> Volver
+                a Portafolio
+            </button>
+        </div>
+        <img id="fullScreenImg" src=""
+            class="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300 cursor-zoom-in">
+    </div>
+
+    <!-- Contact Modal (Brief Empresarial) -->
+    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()">
+        </div>
+        <div
+            class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
+            <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
+                <button onclick="closeContactModal()" aria-label="Cerrar modal"
+                    class="text-gray-400 hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto">
+                <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Nombre Completo</label>
+                        <input type="text" id="briefName" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Empresa / Marca</label>
+                        <input type="text" id="briefCompany" required
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Servicio de Interés</label>
+                        <select id="briefService"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                            <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
+                            <option value="E-commerce" class="bg-black">E-commerce</option>
+                            <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
+                            <option value="Branding" class="bg-black">Branding</option>
+                            <option value="Ads / Publicidad" class="bg-black">Ads / Publicidad</option>
+                            <option value="Otro" class="bg-black">Otro</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-400 mb-1">Detalles del Proyecto</label>
+                        <textarea id="briefDetails" rows="3"
+                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors"
+                            placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                        <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="bg-black pt-16 pb-8 relative">
-        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]"></div>
+        <div
+            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]">
+        </div>
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <!-- Brand -->
                 <div class="col-span-1 md:col-span-1">
-                    <a href="index.html" class="text-2xl font-heading font-bold block mb-4">ADYRON<span class="text-brand-blue">.</span></a>
+                    <a href="index.html" class="relative w-20 h-20 flex items-center justify-center group mb-6">
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                        </div>
+                        <div
+                            class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON"
+                                width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
+                        </div>
+                    </a>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Transformamos ideas complejas en productos digitales simples.
                     </p>
+                    <div class="flex flex-wrap gap-4 mt-6">
+                        <a href="https://www.facebook.com/profile.php?id=61584513332865"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#1877F2] hover:shadow-[0_0_15px_rgba(24,119,242,0.5)]"
+                            aria-label="Facebook">
+                            <i data-lucide="facebook"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#1877F2] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.instagram.com/adyron8/"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#E4405F] hover:shadow-[0_0_15px_rgba(228,64,95,0.5)]"
+                            aria-label="Instagram">
+                            <i data-lucide="instagram"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#E4405F] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adyron-sitios-web-con-estilos-94966339b/"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#0A66C2] hover:shadow-[0_0_15px_rgba(10,102,194,0.5)]"
+                            aria-label="LinkedIn">
+                            <i data-lucide="linkedin"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#0A66C2] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://x.com/adyronweb"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                            aria-label="X">
+                            <i data-lucide="twitter"
+                                class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@adyronsitioswebsconestilo"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FF0000] hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]"
+                            aria-label="YouTube">
+                            <i data-lucide="youtube"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FF0000] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@adyronsitioswebs"
+                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FE2C55] hover:shadow-[0_0_15px_rgba(254,44,85,0.5)]"
+                            aria-label="TikTok">
+                            <i data-lucide="video"
+                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FE2C55] group-hover:scale-110 transition-all duration-300"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Links -->
@@ -313,7 +674,8 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="index.html" class="hover:text-brand-blue transition-colors">Inicio</a></li>
                         <li><a href="servicios.html" class="hover:text-brand-blue transition-colors">Servicios</a></li>
-                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a></li>
+                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a>
+                        </li>
                         <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a></li>
                     </ul>
                 </div>
@@ -323,10 +685,14 @@
                     <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Pagos</h4>
                     <p class="text-gray-400 text-sm mb-2">Paga en CÓMODAS CUOTAS</p>
                     <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
-                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16" loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24" loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16"
+                            loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24"
+                            loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20"
+                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20"
+                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
                     </div>
                 </div>
 
@@ -335,16 +701,20 @@
                     <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Contacto</h4>
                     <ul class="space-y-4 text-sm text-gray-400">
                         <li>
-                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
                                     <i data-lucide="phone" class="w-4 h-4"></i>
                                 </div>
                                 <span>+593 960 761 791</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer"
+                                class="flex items-center gap-3 group hover:text-white transition-colors">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
                                     <i data-lucide="mail" class="w-4 h-4"></i>
                                 </div>
                                 <span>gerencia@adyronweb.site</span>
@@ -359,119 +729,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Project Modal -->
-    <div id="projectModal" class="fixed inset-0 z-[60] hidden items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeModal()"></div>
-        <div class="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
-            
-            <!-- Modal Header -->
-            <div class="absolute top-4 right-4 z-20">
-                <button onclick="closeModal()" aria-label="Cerrar modal" class="bg-black/50 hover:bg-white/20 text-white p-2 rounded-full backdrop-blur-md transition-all">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-
-            <div class="flex flex-col md:flex-row h-full">
-                <!-- Image Side -->
-                <div class="w-full md:w-1/2 h-64 md:h-auto relative bg-gray-900 group cursor-zoom-in overflow-hidden" onclick="openFullScreen()">
-                    <img id="modalImage" src="" alt="Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors duration-300"></div>
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-                        <span class="bg-black/60 text-white px-5 py-2 rounded-full backdrop-blur-md text-sm font-bold flex items-center gap-2 border border-white/10 shadow-xl transform translate-y-4 group-hover:translate-y-0 transition-all">
-                            <i data-lucide="maximize-2" class="w-4 h-4"></i> Ver Pantalla Completa
-                        </span>
-                    </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent md:bg-gradient-to-r pointer-events-none"></div>
-                </div>
-
-                <!-- Content Side -->
-                <div class="w-full md:w-1/2 p-8 overflow-y-auto scrollbar-hide">
-                    <div class="mb-6">
-                        <span id="modalIndustry" class="text-xs font-bold tracking-widest text-brand-cyan uppercase mb-2 block">INDUSTRIA</span>
-                        <h2 id="modalTitle" class="text-3xl font-heading font-black text-white mb-2 leading-tight">Titulo del Proyecto</h2>
-                        <p id="modalService" class="text-sm text-gray-400 font-medium">Servicio Realizado</p>
-                    </div>
-
-                    <div class="space-y-6 mb-8">
-                        <div>
-                            <h4 class="text-white font-bold mb-2 flex items-center gap-2"><i data-lucide="file-text" class="w-4 h-4 text-brand-blue"></i> Descripción</h4>
-                            <p id="modalDesc" class="text-gray-400 text-sm leading-relaxed">Descripción del proyecto...</p>
-                        </div>
-                        
-                        <div>
-                            <h4 class="text-white font-bold mb-2 flex items-center gap-2"><i data-lucide="trophy" class="w-4 h-4 text-brand-blue"></i> Resultados Clave</h4>
-                            <ul id="modalResults" class="space-y-2 text-sm text-gray-300">
-                                <!-- List items injected via JS -->
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col gap-3 mt-auto">
-                        <a id="modalWhatsapp" href="#" target="_blank" rel="noopener noreferrer" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="message-circle" class="w-5 h-5"></i> COTIZAR PROYECTO SIMILAR
-                        </a>
-                        <a id="modalWebLink" href="#" target="_blank" rel="noopener noreferrer" class="hidden w-full border border-white/10 hover:bg-white/5 text-white font-bold py-3 rounded-xl text-center transition-all flex items-center justify-center gap-2">
-                            <i data-lucide="external-link" class="w-5 h-5"></i> VISITAR SITIO WEB
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Full Screen Image Modal -->
-    <div id="fullScreenModal" class="fixed inset-0 z-[70] hidden items-center justify-center bg-black/95 backdrop-blur-2xl transition-all duration-300 opacity-0">
-        <div class="absolute top-6 right-6 z-50">
-            <button onclick="closeFullScreen()" aria-label="Cerrar pantalla completa" class="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-full backdrop-blur-md transition-all font-bold flex items-center gap-2 border border-white/10 group">
-                <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i> Volver a Portafolio
-            </button>
-        </div>
-        <img id="fullScreenImg" src="" class="max-w-[95vw] max-h-[90vh] object-contain rounded-lg shadow-2xl scale-95 transition-transform duration-300 cursor-zoom-in">
-    </div>
-
-    <!-- Contact Modal (Brief Empresarial) -->
-    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()"></div>
-        <div class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
-            <div class="p-6 border-b border-white/10 flex justify-between items-center">
-                <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
-                <button onclick="closeContactModal()" aria-label="Cerrar modal" class="text-gray-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div class="p-6 overflow-y-auto">
-                <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Nombre Completo</label>
-                        <input type="text" id="briefName" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Empresa / Marca</label>
-                        <input type="text" id="briefCompany" required class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Servicio de Interés</label>
-                        <select id="briefService" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
-                            <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
-                            <option value="E-commerce" class="bg-black">E-commerce</option>
-                            <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
-                            <option value="Branding" class="bg-black">Branding</option>
-                            <option value="Ads / Publicidad" class="bg-black">Ads / Publicidad</option>
-                            <option value="Otro" class="bg-black">Otro</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-1">Detalles del Proyecto</label>
-                        <textarea id="briefDetails" rows="3" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors" placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <script src="js/app.js?v=1.1"></script>
     <script src="js/particles.js?v=1.1"></script>
@@ -539,7 +796,7 @@
                 service: "Desarrollo Web Corporativo",
                 desc: "Desarrollamos una landing page corporativa enfocada en conversión para software contable ecuatoriano. El objetivo fue optimizar la captación de clientes potenciales mediante formularios inteligentes, jerarquía visual clara y diseño responsive.",
                 results: ["Mejora en experiencia de usuario", "Navegación optimizada", "Captura efectiva de leads", "Imagen tecnológica profesional"],
-                img: "https://i.ibb.co/MxD4H9JN/1.jpg",
+                img: "img/1.jpg",
                 link: "https://www.saf-telmah.com/"
             },
             {
@@ -548,7 +805,7 @@
                 service: "Diseño Web Empresarial",
                 desc: "Creamos un sitio corporativo enfocado en comunicar soluciones técnicas de forma clara y profesional. Implementamos un hero visual potente, CTA estratégicos y estructura informativa optimizada.",
                 results: ["Mayor visibilidad de marca", "Experiencia responsive", "Presentación clara de servicios"],
-                img: "https://i.ibb.co/svLYLRrC/2.jpg"
+                img: "img/2.jpg"
             },
             {
                 title: "Iglesia Cristiana Damasco",
@@ -556,7 +813,7 @@
                 service: "Plataforma Web Institucional",
                 desc: "Desarrollamos una web institucional moderna con enfoque comunitario. Se integraron secciones dinámicas para predicaciones, eventos, donaciones y contenido multimedia.",
                 results: ["Mejor acceso a información", "Mayor interacción digital", "Diseño adaptable a móviles"],
-                img: "https://i.ibb.co/pB7Nzjpd/3.jpg"
+                img: "img/3.jpg"
             },
             {
                 title: "Animal Best Ltda",
@@ -564,7 +821,7 @@
                 service: "Desarrollo E-commerce",
                 desc: "Implementamos una tienda online optimizada para experiencia de usuario, navegación intuitiva y campañas promocionales. Se priorizó conversión y facilidad de compra.",
                 results: ["Flujo de compra optimizado", "Catálogo dinámico", "Mayor engagement comercial"],
-                img: "https://i.ibb.co/B2Gt11Rk/4.jpg"
+                img: "img/4.jpg"
             },
             {
                 title: "DiPallets S.A.S",
@@ -572,7 +829,7 @@
                 service: "Web Corporativa",
                 desc: "Diseñamos un sitio empresarial con enfoque institucional y B2B. Se estructuró contenido corporativo para transmitir confianza, solidez y profesionalismo.",
                 results: ["Imagen corporativa fortalecida", "Comunicación clara de servicios", "Mejor posicionamiento digital"],
-                img: "https://i.ibb.co/RkVdYQBR/5.jpg"
+                img: "img/5.jpg"
             },
             {
                 title: "Dentalis Clínica Dental",
@@ -580,7 +837,7 @@
                 service: "Web Médica Profesional",
                 desc: "Desarrollamos una plataforma enfocada en reservas online, presentación de tratamientos y confianza visual. Se priorizó UX móvil y accesibilidad.",
                 results: ["Mayor conversión de pacientes", "Proceso de reserva optimizado", "Diseño moderno clínico"],
-                img: "https://i.ibb.co/sdWz1bM5/6.jpg"
+                img: "img/6.jpg"
             },
             {
                 title: "Avícola Mieles Avicmiel S.A.",
@@ -588,7 +845,7 @@
                 service: "Web Empresarial",
                 desc: "Creamos una plataforma corporativa para mostrar procesos productivos, calidad y catálogo comercial orientado a distribución.",
                 results: ["Imagen empresarial sólida", "Mayor presencia digital", "Comunicación comercial clara"],
-                img: "https://i.ibb.co/BKFRL8HR/7.jpg"
+                img: "img/7.jpg"
             }
         ];
 
@@ -599,10 +856,10 @@
             document.getElementById('modalIndustry').innerText = p.industry;
             document.getElementById('modalService').innerText = p.service;
             document.getElementById('modalDesc').innerText = p.desc;
-            
+
             const resultsList = document.getElementById('modalResults');
             resultsList.innerHTML = p.results.map(r => `<li class="flex items-start gap-2"><span class="text-brand-cyan mt-1">›</span> ${r}</li>`).join('');
-            
+
             const whatsappUrl = `https://wa.me/593960761791?text=Hola%20ADYRON,%20vi%20el%20caso%20de%20${encodeURIComponent(p.title)}%20y%20quiero%20algo%20similar.`;
             document.getElementById('modalWhatsapp').href = whatsappUrl;
 
@@ -629,11 +886,11 @@
             const imgSrc = document.getElementById('modalImage').src;
             const modal = document.getElementById('fullScreenModal');
             const img = document.getElementById('fullScreenImg');
-            
+
             img.src = imgSrc;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
-            
+
             // Small delay for animation
             setTimeout(() => {
                 modal.classList.remove('opacity-0');
@@ -645,11 +902,11 @@
         function closeFullScreen() {
             const modal = document.getElementById('fullScreenModal');
             const img = document.getElementById('fullScreenImg');
-            
+
             modal.classList.add('opacity-0');
             img.classList.remove('scale-100');
             img.classList.add('scale-95');
-            
+
             setTimeout(() => {
                 modal.classList.add('hidden');
                 modal.classList.remove('flex');
@@ -662,10 +919,10 @@
 
         // Zoom Effect Logic
         const fullScreenImg = document.getElementById('fullScreenImg');
-        
-        fullScreenImg.addEventListener('click', function(e) {
+
+        fullScreenImg.addEventListener('click', function (e) {
             e.stopPropagation();
-            
+
             if (isZoomed) {
                 this.style.transition = 'transform 0.3s ease';
                 this.style.transform = 'scale(1)';
@@ -675,7 +932,7 @@
                 const rect = this.getBoundingClientRect();
                 const x = ((e.clientX - rect.left) / rect.width) * 100;
                 const y = ((e.clientY - rect.top) / rect.height) * 100;
-                
+
                 this.style.transition = 'transform 0.3s ease';
                 this.style.transformOrigin = `${x}% ${y}%`;
                 this.style.transform = 'scale(2)';
@@ -684,13 +941,13 @@
             }
         });
 
-        fullScreenImg.addEventListener('mousemove', function(e) {
+        fullScreenImg.addEventListener('mousemove', function (e) {
             if (!isZoomed) return;
-            
+
             const rect = this.getBoundingClientRect();
             const x = ((e.clientX - rect.left) / rect.width) * 100;
             const y = ((e.clientY - rect.top) / rect.height) * 100;
-            
+
             this.style.transition = 'none';
             this.style.transformOrigin = `${x}% ${y}%`;
         });
@@ -709,16 +966,26 @@
             const company = document.getElementById('briefCompany').value;
             const service = document.getElementById('briefService').value;
             const details = document.getElementById('briefDetails').value;
-            
+
             const message = `Hola ADYRON, envío mi Brief Empresarial:%0A%0A` +
-                            `👤 *Nombre:* ${name}%0A` +
-                            `🏢 *Empresa:* ${company}%0A` +
-                            `🚀 *Servicio:* ${service}%0A` +
-                            `📝 *Detalles:* ${details}`;
-            
+                `👤 *Nombre:* ${name}%0A` +
+                `🏢 *Empresa:* ${company}%0A` +
+                `🚀 *Servicio:* ${service}%0A` +
+                `📝 *Detalles:* ${details}`;
+
             window.open(`https://wa.me/593960761791?text=${message}`, '_blank');
             closeContactModal();
         }
     </script>
+    <!-- Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
+    <link href="./src/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
 </body>
+
 </html>
