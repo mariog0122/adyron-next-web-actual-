@@ -23,7 +23,8 @@
     <!-- Tailwind CSS -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
     <link href="./src/style.css" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (Local) -->
+    <script type="module" src="./src/icons.js"></script>
 
     <style>
         body {
@@ -377,555 +378,569 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-40 pb-20 relative overflow-hidden">
-        <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl -z-10 opacity-30 pointer-events-none">
+    <main>
+        <section class="relative pt-32 pb-20 overflow-hidden">
             <div
-                class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-[100px] opacity-50">
-            </div>
-        </div>
-
-        <div class="container mx-auto px-6 text-center">
-            <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-6 reveal">
-                SOLUCIONES DIGITALES <br>
-                <span class="text-brand-blue">DE ALTO IMPACTO</span>
-            </h1>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg reveal delay-100">
-                No vendemos "servicios", implementamos sistemas de crecimiento. Cada línea de código y cada pixel tiene
-                un propósito: vender más.
-            </p>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section class="py-20 bg-brand-surface/50">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                <!-- Service 1 -->
-                <div class="glass-card p-8 rounded-2xl reveal">
-                    <div
-                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-                        <i data-lucide="layout" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Desarrollo Web High-End</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Sitios web ultrarrápidos construidos con tecnologías modernas (Next.js, Tailwind). Optimizados
-                        para conversión y SEO técnico desde el día uno.
-                    </p>
-                </div>
-
-                <!-- Service 2 -->
-                <div class="glass-card p-8 rounded-2xl reveal delay-100">
-                    <div
-                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-                        <i data-lucide="shopping-bag" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">E-commerce Scalable</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Tiendas online que no se caen en Black Friday. Integraciones con pasarelas de pago locales,
-                        gestión de inventario y recuperación de carritos.
-                    </p>
-                </div>
-
-                <!-- Service 3 -->
-                <div class="glass-card p-8 rounded-2xl reveal delay-200">
-                    <div
-                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-                        <i data-lucide="palette" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Branding de Autoridad</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Identidad visual que eleva el valor percibido de tu marca. Logos, manuales de marca y dirección
-                        de arte para redes sociales.
-                    </p>
-                </div>
-
-                <!-- Service 4 -->
-                <div class="glass-card p-8 rounded-2xl reveal">
-                    <div
-                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-                        <i data-lucide="target" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Paid Media (Ads)</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Campañas en Meta y Google Ads con estructura de embudo. Dejamos de lado las métricas vanidosas
-                        para enfocarnos en el ROAS.
-                    </p>
-                </div>
-
-                <!-- Service 5 -->
-                <div class="glass-card p-8 rounded-2xl reveal delay-100">
-                    <div
-                        class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
-                        <i data-lucide="bot" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Automatización con IA</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Chatbots de atención al cliente, automatización de correos y CRMs que trabajan solos. Ahorra
-                        horas operativas cada semana.
-                    </p>
-                </div>
-
-                <!-- Service 6 -->
-                <div class="glass-card p-8 rounded-2xl reveal delay-200 border-brand-blue/30 bg-brand-blue/5">
-                    <div class="w-14 h-14 bg-brand-blue rounded-xl flex items-center justify-center text-white mb-6">
-                        <i data-lucide="rocket" class="w-7 h-7"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Growth Partner</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Nos convertimos en tu departamento de marketing externo. Estrategia integral, ejecución y
-                        optimización continua mes a mes.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="py-20 bg-brand-surface/30 border-t border-white/5">
-        <div class="container mx-auto px-6 max-w-3xl reveal">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl sm:text-4xl font-heading font-black mb-2 uppercase tracking-widest">SOLUCIONES <span
-                        class="highlight-text">DIGITALES</span></h2>
-                <p class="text-gray-400 text-lg">Conectando tu marca con el futuro.</p>
-            </div>
-
-            <div class="space-y-4">
-
-                <div class="faq-item-custom">
-                    <button class="faq-question-custom" onclick="toggleFaq(this)">
-                        <div class="flex items-center">
-                            <div class="connection-indicator">
-                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                            </div>
-                            ¿Qué servicios ofrecen?
-                        </div>
-                        <span class="icon-custom">▼</span>
-                    </button>
-                    <div class="faq-answer-custom">
-                        <div class="answer-content-custom">
-                            <p><strong><span class="text-brand-blue">●</span> Conexión Establecida:</strong>
-                                Desarrollamos sitios web, gestionamos redes sociales y creamos estrategias para impulsar
-                                tu marca.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item-custom">
-                    <button class="faq-question-custom" onclick="toggleFaq(this)">
-                        <div class="flex items-center">
-                            <div class="connection-indicator">
-                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                            </div>
-                            ¿Cómo inicio un proyecto?
-                        </div>
-                        <span class="icon-custom">▼</span>
-                    </button>
-                    <div class="faq-answer-custom">
-                        <div class="answer-content-custom">
-                            <p>Solo contáctanos con tu idea y objetivos; nos encargamos del resto del desarrollo técnico
-                                y creativo para que tú solo te preocupes por crecer.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item-custom">
-                    <button class="faq-question-custom" onclick="toggleFaq(this)">
-                        <div class="flex items-center">
-                            <div class="connection-indicator">
-                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                            </div>
-                            ¿Cuánto tiempo tarda el desarrollo?
-                        </div>
-                        <span class="icon-custom">▼</span>
-                    </button>
-                    <div class="faq-answer-custom">
-                        <div class="answer-content-custom">
-                            <p>El tiempo varía según el proyecto, pero nuestro flujo optimizado nos permite entregar
-                                sitios web funcionales en 3 a 6 semanas.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item-custom">
-                    <button class="faq-question-custom" onclick="toggleFaq(this)">
-                        <div class="flex items-center">
-                            <div class="connection-indicator">
-                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                            </div>
-                            ¿Ofrecen soporte continuo?
-                        </div>
-                        <span class="icon-custom">▼</span>
-                    </button>
-                    <div class="faq-answer-custom">
-                        <div class="answer-content-custom">
-                            <p>Sí, brindamos mantenimiento activo y actualizaciones de seguridad para que tu presencia
-                                digital siempre esté online y protegida.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item-custom">
-                    <button class="faq-question-custom" onclick="toggleFaq(this)">
-                        <div class="flex items-center">
-                            <div class="connection-indicator">
-                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                            </div>
-                            ¿Trabajan con marcas pequeñas?
-                        </div>
-                        <span class="icon-custom">▼</span>
-                    </button>
-                    <div class="faq-answer-custom">
-                        <div class="answer-content-custom">
-                            <p>Claro, nuestra tecnología es escalable. Ayudamos a marcas reales de cualquier tamaño a
-                                conectar con su público objetivo.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faq-item-custom">
-                    <button class="faq-question-custom" onclick="toggleFaq(this)">
-                        <div class="flex items-center">
-                            <div class="connection-indicator">
-                                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-                            </div>
-                            ¿Cómo personalizan las estrategias?
-                        </div>
-                        <span class="icon-custom">▼</span>
-                    </button>
-                    <div class="faq-answer-custom">
-                        <div class="answer-content-custom">
-                            <p>Analizamos los datos de tu mercado y objetivos para crear planes de ruta únicos que
-                                reflejen la esencia digital de tu marca.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="py-24 text-center">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-heading font-black mb-8">¿No sabes qué necesitas?</h2>
-            <a href="#" onclick="openContactModal(); return false;" class="interactive-hover-button group">
-                <div class="dot"></div>
-                <span>
-                    Agendar Consultoría Gratuita
-                    <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
-                </span>
-            </a>
-        </div>
-    </section>
-
-    <footer class="bg-black pt-16 pb-8 relative">
-        <div
-            class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]">
-        </div>
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 mb-12">
-                <!-- Brand -->
-                <div class="col-span-1 md:col-span-1">
-                    <a href="index.html" class="relative w-20 h-20 flex items-center justify-center group mb-6">
-                        <div
-                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
-                        </div>
-                        <div
-                            class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
-                            <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON"
-                                width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
-                        </div>
-                    </a>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Transformamos ideas complejas en productos digitales simples.
-                    </p>
-                    <div class="flex flex-wrap gap-4 mt-6">
-                        <a href="https://www.facebook.com/profile.php?id=61584513332865"
-                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#1877F2] hover:shadow-[0_0_15px_rgba(24,119,242,0.5)]"
-                            aria-label="Facebook">
-                            <i data-lucide="facebook"
-                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#1877F2] group-hover:scale-110 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://www.instagram.com/adyron8/"
-                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#E4405F] hover:shadow-[0_0_15px_rgba(228,64,95,0.5)]"
-                            aria-label="Instagram">
-                            <i data-lucide="instagram"
-                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#E4405F] group-hover:scale-110 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/adyron-sitios-web-con-estilos-94966339b/"
-                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#0A66C2] hover:shadow-[0_0_15px_rgba(10,102,194,0.5)]"
-                            aria-label="LinkedIn">
-                            <i data-lucide="linkedin"
-                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#0A66C2] group-hover:scale-110 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://x.com/adyronweb"
-                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
-                            aria-label="X">
-                            <i data-lucide="twitter"
-                                class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@adyronsitioswebsconestilo"
-                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FF0000] hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]"
-                            aria-label="YouTube">
-                            <i data-lucide="youtube"
-                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FF0000] group-hover:scale-110 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://www.tiktok.com/@adyronsitioswebs"
-                            class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FE2C55] hover:shadow-[0_0_15px_rgba(254,44,85,0.5)]"
-                            aria-label="TikTok">
-                            <i data-lucide="video"
-                                class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FE2C55] group-hover:scale-110 transition-all duration-300"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Links -->
-                <div>
-                    <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Enlaces</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="index.html" class="hover:text-brand-blue transition-colors">Inicio</a></li>
-                        <li><a href="servicios.html" class="hover:text-brand-blue transition-colors">Servicios</a></li>
-                        <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a>
-                        </li>
-                        <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a></li>
-                    </ul>
-                </div>
-
-                <!-- Payment -->
-                <div>
-                    <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Pagos</h4>
-                    <p class="text-gray-400 text-sm mb-2">Paga en CÓMODAS CUOTAS</p>
-                    <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
-                        <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16"
-                            loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24"
-                            loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40" height="20"
-                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
-                        <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20"
-                            loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
-                    </div>
-                </div>
-
-                <!-- Contact -->
-                <div>
-                    <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Contacto</h4>
-                    <ul class="space-y-4 text-sm text-gray-400">
-                        <li>
-                            <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer"
-                                class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
-                                    <i data-lucide="phone" class="w-4 h-4"></i>
-                                </div>
-                                <span>+593 960 761 791</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer"
-                                class="flex items-center gap-3 group hover:text-white transition-colors">
-                                <div
-                                    class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
-                                    <i data-lucide="mail" class="w-4 h-4"></i>
-                                </div>
-                                <span>gerencia@adyronweb.site</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="text-center text-gray-600 text-sm border-t border-white/5 pt-8">
-                <p>&copy; 2026 ADYRON Digital Agency. Todos los derechos reservados.</p>
-                <p class="mt-2 text-xs opacity-70">Tecnología 100% Ecuatoriana.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- AI Assistant Chat Widget -->
-    <button id="chatToggle" aria-label="Abrir chat con IA"
-        class="fixed bottom-6 right-6 z-50 bg-brand-blue hover:bg-blue-600 text-white w-16 h-16 rounded-full shadow-[0_0_30px_rgba(0,54,255,0.4)] transition-all hover:scale-110 group flex items-center justify-center overflow-hidden border-2 border-white/20">
-        <span class="absolute top-1 right-1 flex h-4 w-4 z-20">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 border border-black"></span>
-        </span>
-        <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="Asistente ADYRON" width="64" height="64"
-            class="w-full h-full object-cover relative z-10">
-    </button>
-
-    <div id="chatBox"
-        class="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[350px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl hidden z-50 flex flex-col backdrop-blur-xl transition-all duration-300 transform translate-y-10 opacity-0">
-        <div
-            class="p-4 border-b border-white/10 flex justify-between items-center bg-gradient-to-r from-brand-blue/20 to-transparent rounded-t-2xl">
-            <div class="flex items-center gap-3">
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-4xl -z-10 opacity-30 pointer-events-none">
                 <div
-                    class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shadow-lg shadow-brand-blue/30 overflow-hidden">
-                    <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="AI" width="40" height="40"
-                        class="w-full h-full object-cover">
-                </div>
-                <div>
-                    <span class="font-bold text-white block leading-tight">ADYRON AI</span>
-                    <span class="text-xs text-green-400 flex items-center gap-1"><span
-                            class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> En línea</span>
+                    class="absolute top-20 left-1/4 w-96 h-96 bg-brand-blue rounded-full mix-blend-multiply filter blur-[100px] opacity-50">
                 </div>
             </div>
-            <button id="closeChat" aria-label="Cerrar chat" class="text-gray-400 hover:text-white transition-colors"><i
-                    data-lucide="x" class="w-5 h-5"></i></button>
-        </div>
 
-        <div id="chatMessages"
-            class="flex-1 overflow-y-auto p-4 space-y-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
-            <div id="typing" class="hidden mb-4 flex gap-3">
-                <div
-                    class="w-8 h-8 rounded-full bg-brand-blue/50 flex-shrink-0 flex items-center justify-center text-xs">
-                    ...</div>
-                <div class="bg-white/10 px-4 py-3 rounded-2xl rounded-tl-none flex gap-1 items-center h-10">
-                    <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
-                    <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-100"></span>
-                    <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-200"></span>
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-heading font-black mb-6 reveal">
+                    SOLUCIONES DIGITALES <br>
+                    <span class="text-brand-blue">DE ALTO IMPACTO</span>
+                </h1>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg reveal delay-100">
+                    No vendemos "servicios", implementamos sistemas de crecimiento. Cada línea de código y cada pixel
+                    tiene
+                    un propósito: vender más.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="py-20 bg-brand-surface/50">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Service 1 -->
+                    <div class="glass-card p-8 rounded-2xl reveal">
+                        <div
+                            class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                            <i data-lucide="layout" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Desarrollo Web High-End</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Sitios web ultrarrápidos construidos con tecnologías modernas (Next.js, Tailwind).
+                            Optimizados
+                            para conversión y SEO técnico desde el día uno.
+                        </p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card p-8 rounded-2xl reveal delay-100">
+                        <div
+                            class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                            <i data-lucide="shopping-bag" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">E-commerce Scalable</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Tiendas online que no se caen en Black Friday. Integraciones con pasarelas de pago locales,
+                            gestión de inventario y recuperación de carritos.
+                        </p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card p-8 rounded-2xl reveal delay-200">
+                        <div
+                            class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                            <i data-lucide="palette" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Branding de Autoridad</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Identidad visual que eleva el valor percibido de tu marca. Logos, manuales de marca y
+                            dirección
+                            de arte para redes sociales.
+                        </p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-card p-8 rounded-2xl reveal">
+                        <div
+                            class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                            <i data-lucide="target" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Paid Media (Ads)</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Campañas en Meta y Google Ads con estructura de embudo. Dejamos de lado las métricas
+                            vanidosas
+                            para enfocarnos en el ROAS.
+                        </p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="glass-card p-8 rounded-2xl reveal delay-100">
+                        <div
+                            class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6">
+                            <i data-lucide="bot" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Automatización con IA</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Chatbots de atención al cliente, automatización de correos y CRMs que trabajan solos. Ahorra
+                            horas operativas cada semana.
+                        </p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="glass-card p-8 rounded-2xl reveal delay-200 border-brand-blue/30 bg-brand-blue/5">
+                        <div
+                            class="w-14 h-14 bg-brand-blue rounded-xl flex items-center justify-center text-white mb-6">
+                            <i data-lucide="rocket" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Growth Partner</h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Nos convertimos en tu departamento de marketing externo. Estrategia integral, ejecución y
+                            optimización continua mes a mes.
+                        </p>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="p-4 border-t border-white/10 bg-black/20">
-            <div class="flex gap-2 relative">
-                <input type="text" id="userInput"
-                    class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-brand-blue focus:bg-white/10 transition-all placeholder-gray-500"
-                    placeholder="Escribe tu mensaje...">
-                <button id="sendBtn" aria-label="Enviar mensaje"
-                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-blue p-2 rounded-lg hover:bg-blue-600 transition-colors text-white shadow-lg shadow-brand-blue/20">
-                    <i data-lucide="send" class="w-4 h-4"></i>
-                </button>
-            </div>
-            <div class="text-center mt-2">
-                <p class="text-[10px] text-gray-600">Powered by ADYRON Local AI</p>
-            </div>
-        </div>
-    </div>
+        <!-- FAQ Section -->
+        <section class="py-20 bg-brand-surface/30 border-t border-white/5">
+            <div class="container mx-auto px-6 max-w-3xl reveal">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl sm:text-4xl font-heading font-black mb-2 uppercase tracking-widest">SOLUCIONES
+                        <span class="highlight-text">DIGITALES</span></h2>
+                    <p class="text-gray-400 text-lg">Conectando tu marca con el futuro.</p>
+                </div>
 
-    <!-- Contact Modal (Brief Empresarial) -->
-    <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()">
-        </div>
-        <div
-            class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
-            <div class="p-6 border-b border-white/10 flex justify-between items-center">
-                <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
-                <button onclick="closeContactModal()" aria-label="Cerrar modal"
-                    class="text-gray-400 hover:text-white transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
+                <div class="space-y-4">
+
+                    <div class="faq-item-custom">
+                        <button class="faq-question-custom" onclick="toggleFaq(this)">
+                            <div class="flex items-center">
+                                <div class="connection-indicator">
+                                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                </div>
+                                ¿Qué servicios ofrecen?
+                            </div>
+                            <span class="icon-custom">▼</span>
+                        </button>
+                        <div class="faq-answer-custom">
+                            <div class="answer-content-custom">
+                                <p><strong><span class="text-brand-blue">●</span> Conexión Establecida:</strong>
+                                    Desarrollamos sitios web, gestionamos redes sociales y creamos estrategias para
+                                    impulsar
+                                    tu marca.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-custom">
+                        <button class="faq-question-custom" onclick="toggleFaq(this)">
+                            <div class="flex items-center">
+                                <div class="connection-indicator">
+                                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                </div>
+                                ¿Cómo inicio un proyecto?
+                            </div>
+                            <span class="icon-custom">▼</span>
+                        </button>
+                        <div class="faq-answer-custom">
+                            <div class="answer-content-custom">
+                                <p>Solo contáctanos con tu idea y objetivos; nos encargamos del resto del desarrollo
+                                    técnico
+                                    y creativo para que tú solo te preocupes por crecer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-custom">
+                        <button class="faq-question-custom" onclick="toggleFaq(this)">
+                            <div class="flex items-center">
+                                <div class="connection-indicator">
+                                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                </div>
+                                ¿Cuánto tiempo tarda el desarrollo?
+                            </div>
+                            <span class="icon-custom">▼</span>
+                        </button>
+                        <div class="faq-answer-custom">
+                            <div class="answer-content-custom">
+                                <p>El tiempo varía según el proyecto, pero nuestro flujo optimizado nos permite entregar
+                                    sitios web funcionales en 3 a 6 semanas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-custom">
+                        <button class="faq-question-custom" onclick="toggleFaq(this)">
+                            <div class="flex items-center">
+                                <div class="connection-indicator">
+                                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                </div>
+                                ¿Ofrecen soporte continuo?
+                            </div>
+                            <span class="icon-custom">▼</span>
+                        </button>
+                        <div class="faq-answer-custom">
+                            <div class="answer-content-custom">
+                                <p>Sí, brindamos mantenimiento activo y actualizaciones de seguridad para que tu
+                                    presencia
+                                    digital siempre esté online y protegida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-custom">
+                        <button class="faq-question-custom" onclick="toggleFaq(this)">
+                            <div class="flex items-center">
+                                <div class="connection-indicator">
+                                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                </div>
+                                ¿Trabajan con marcas pequeñas?
+                            </div>
+                            <span class="icon-custom">▼</span>
+                        </button>
+                        <div class="faq-answer-custom">
+                            <div class="answer-content-custom">
+                                <p>Claro, nuestra tecnología es escalable. Ayudamos a marcas reales de cualquier tamaño
+                                    a
+                                    conectar con su público objetivo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item-custom">
+                        <button class="faq-question-custom" onclick="toggleFaq(this)">
+                            <div class="flex items-center">
+                                <div class="connection-indicator">
+                                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                                </div>
+                                ¿Cómo personalizan las estrategias?
+                            </div>
+                            <span class="icon-custom">▼</span>
+                        </button>
+                        <div class="faq-answer-custom">
+                            <div class="answer-content-custom">
+                                <p>Analizamos los datos de tu mercado y objetivos para crear planes de ruta únicos que
+                                    reflejen la esencia digital de tu marca.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 overflow-y-auto">
-                <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
+        </section>
+
+        <!-- CTA -->
+        <section class="py-24 text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-heading font-black mb-8">¿No sabes qué necesitas?</h2>
+                <a href="#" onclick="openContactModal(); return false;" class="interactive-hover-button group">
+                    <div class="dot"></div>
+                    <span>
+                        Agendar Consultoría Gratuita
+                        <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <footer class="bg-black pt-16 pb-8 relative">
+            <div
+                class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-cyan to-transparent shadow-[0_0_10px_#00f7ff]">
+            </div>
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-4 gap-12 mb-12">
+                    <!-- Brand -->
+                    <div class="col-span-1 md:col-span-1">
+                        <a href="index.html" class="relative w-20 h-20 flex items-center justify-center group mb-6">
+                            <div
+                                class="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400 via-cyan-200 to-transparent animate-[spin_2s_linear_infinite] blur-[2px]">
+                            </div>
+                            <div
+                                class="absolute inset-[2px] bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-[inset_0_0_10px_rgba(255,255,255,1)] z-10">
+                                <img src="https://i.ibb.co/HfjshNTD/LOGO-premium-removebg-preview.png" alt="ADYRON"
+                                    width="56" height="56" loading="lazy" class="w-14 h-14 object-contain p-1">
+                            </div>
+                        </a>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Transformamos ideas complejas en productos digitales simples.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-6">
+                            <a href="https://www.facebook.com/profile.php?id=61584513332865"
+                                class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#1877F2] hover:shadow-[0_0_15px_rgba(24,119,242,0.5)]"
+                                aria-label="Facebook">
+                                <i data-lucide="facebook"
+                                    class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#1877F2] group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://www.instagram.com/adyron8/"
+                                class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#E4405F] hover:shadow-[0_0_15px_rgba(228,64,95,0.5)]"
+                                aria-label="Instagram">
+                                <i data-lucide="instagram"
+                                    class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#E4405F] group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/adyron-sitios-web-con-estilos-94966339b/"
+                                class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#0A66C2] hover:shadow-[0_0_15px_rgba(10,102,194,0.5)]"
+                                aria-label="LinkedIn">
+                                <i data-lucide="linkedin"
+                                    class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#0A66C2] group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://x.com/adyronweb"
+                                class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.5)]"
+                                aria-label="X">
+                                <i data-lucide="twitter"
+                                    class="w-4 h-4 opacity-70 group-hover:opacity-100 group-hover:text-white group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@adyronsitioswebsconestilo"
+                                class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FF0000] hover:shadow-[0_0_15px_rgba(255,0,0,0.5)]"
+                                aria-label="YouTube">
+                                <i data-lucide="youtube"
+                                    class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FF0000] group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@adyronsitioswebs"
+                                class="tech-social-link group relative w-10 h-10 flex items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all duration-300 hover:border-[#FE2C55] hover:shadow-[0_0_15px_rgba(254,44,85,0.5)]"
+                                aria-label="TikTok">
+                                <i data-lucide="video"
+                                    class="w-5 h-5 opacity-70 group-hover:opacity-100 group-hover:text-[#FE2C55] group-hover:scale-110 transition-all duration-300"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Links -->
                     <div>
-                        <label for="briefName" class="block text-sm font-medium text-gray-400 mb-1">Nombre
-                            Completo</label>
-                        <input type="text" id="briefName" required
-                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Enlaces
+                        </h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="index.html" class="hover:text-brand-blue transition-colors">Inicio</a></li>
+                            <li><a href="servicios.html" class="hover:text-brand-blue transition-colors">Servicios</a>
+                            </li>
+                            <li><a href="portafolio.html" class="hover:text-brand-blue transition-colors">Portafolio</a>
+                            </li>
+                            <li><a href="blog.html" class="hover:text-brand-blue transition-colors">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Payment -->
+                    <div>
+                        <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Pagos</h4>
+                        <p class="text-gray-400 text-sm mb-2">Paga en CÓMODAS CUOTAS</p>
+                        <div class="flex items-center gap-4 bg-white/5 p-3 rounded-xl border border-white/10 w-fit">
+                            <img src="https://cdn.simpleicons.org/visa/white" alt="Visa" width="40" height="16"
+                                loading="lazy" class="h-4 opacity-70 hover:opacity-100 transition-opacity">
+                            <img src="https://cdn.simpleicons.org/mastercard" alt="Mastercard" width="40" height="24"
+                                loading="lazy" class="h-6 opacity-80 hover:opacity-100 transition-opacity">
+                            <img src="https://cdn.simpleicons.org/dinersclub/white" alt="Diners Club" width="40"
+                                height="20" loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                            <img src="https://cdn.simpleicons.org/paypal/white" alt="PayPal" width="40" height="20"
+                                loading="lazy" class="h-5 opacity-70 hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h4 class="font-bold text-white mb-4 tracking-wide text-xs uppercase text-brand-gray">Contacto
+                        </h4>
+                        <ul class="space-y-4 text-sm text-gray-400">
+                            <li>
+                                <a href="https://wa.me/593960761791" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-3 group hover:text-white transition-colors">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                                        <i data-lucide="phone" class="w-4 h-4"></i>
+                                    </div>
+                                    <span>+593 960 761 791</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:gerencia@adyronweb.site" target="_blank" rel="noopener noreferrer"
+                                    class="flex items-center gap-3 group hover:text-white transition-colors">
+                                    <div
+                                        class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-all">
+                                        <i data-lucide="mail" class="w-4 h-4"></i>
+                                    </div>
+                                    <span>gerencia@adyronweb.site</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center text-gray-600 text-sm border-t border-white/5 pt-8">
+                    <p>&copy; 2026 ADYRON Digital Agency. Todos los derechos reservados.</p>
+                    <p class="mt-2 text-xs opacity-70">Tecnología 100% Ecuatoriana.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- AI Assistant Chat Widget -->
+        <button id="chatToggle" aria-label="Abrir chat con IA"
+            class="fixed bottom-6 right-6 z-50 bg-brand-blue hover:bg-blue-600 text-white w-16 h-16 rounded-full shadow-[0_0_30px_rgba(0,54,255,0.4)] transition-all hover:scale-110 group flex items-center justify-center overflow-hidden border-2 border-white/20">
+            <span class="absolute top-1 right-1 flex h-4 w-4 z-20">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 border border-black"></span>
+            </span>
+            <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="Asistente ADYRON" width="64" height="64"
+                class="w-full h-full object-cover relative z-10">
+        </button>
+
+        <div id="chatBox"
+            class="fixed bottom-24 right-4 sm:right-6 w-[90vw] sm:w-[350px] h-[500px] max-h-[80vh] bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl hidden z-50 flex flex-col backdrop-blur-xl transition-all duration-300 transform translate-y-10 opacity-0">
+            <div
+                class="p-4 border-b border-white/10 flex justify-between items-center bg-gradient-to-r from-brand-blue/20 to-transparent rounded-t-2xl">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-10 h-10 rounded-full bg-brand-blue flex items-center justify-center shadow-lg shadow-brand-blue/30 overflow-hidden">
+                        <img src="https://i.ibb.co/ZzcWpT1y/Asistente-de-Adyron-1.png" alt="AI" width="40" height="40"
+                            class="w-full h-full object-cover">
                     </div>
                     <div>
-                        <label for="briefCompany" class="block text-sm font-medium text-gray-400 mb-1">Empresa /
-                            Marca</label>
-                        <input type="text" id="briefCompany" required
-                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        <span class="font-bold text-white block leading-tight">ADYRON AI</span>
+                        <span class="text-xs text-green-400 flex items-center gap-1"><span
+                                class="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span> En línea</span>
                     </div>
-                    <div>
-                        <label for="briefService" class="block text-sm font-medium text-gray-400 mb-1">Servicio de
-                            Interés</label>
-                        <select id="briefService"
-                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
-                            <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
-                            <option value="E-commerce" class="bg-black">E-commerce</option>
-                            <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
-                            <option value="Branding" class="bg-black">Branding</option>
-                            <option value="Ads / Publicidad" class="bg-black">Ads / Publicidad</option>
-                            <option value="Otro" class="bg-black">Otro</option>
-                        </select>
+                </div>
+                <button id="closeChat" aria-label="Cerrar chat"
+                    class="text-gray-400 hover:text-white transition-colors"><i data-lucide="x"
+                        class="w-5 h-5"></i></button>
+            </div>
+
+            <div id="chatMessages"
+                class="flex-1 overflow-y-auto p-4 space-y-2 scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-transparent">
+                <div id="typing" class="hidden mb-4 flex gap-3">
+                    <div
+                        class="w-8 h-8 rounded-full bg-brand-blue/50 flex-shrink-0 flex items-center justify-center text-xs">
+                        ...</div>
+                    <div class="bg-white/10 px-4 py-3 rounded-2xl rounded-tl-none flex gap-1 items-center h-10">
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></span>
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-100"></span>
+                        <span class="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce delay-200"></span>
                     </div>
-                    <div>
-                        <label for="briefDetails" class="block text-sm font-medium text-gray-400 mb-1">Detalles del
-                            Proyecto</label>
-                        <textarea id="briefDetails" rows="3"
-                            class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors"
-                            placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
-                        <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
+                </div>
+            </div>
+
+            <div class="p-4 border-t border-white/10 bg-black/20">
+                <div class="flex gap-2 relative">
+                    <input type="text" id="userInput"
+                        class="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-12 py-3 text-sm text-white focus:outline-none focus:border-brand-blue focus:bg-white/10 transition-all placeholder-gray-500"
+                        placeholder="Escribe tu mensaje...">
+                    <button id="sendBtn" aria-label="Enviar mensaje"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 bg-brand-blue p-2 rounded-lg hover:bg-blue-600 transition-colors text-white shadow-lg shadow-brand-blue/20">
+                        <i data-lucide="send" class="w-4 h-4"></i>
                     </button>
-                </form>
+                </div>
+                <div class="text-center mt-2">
+                    <p class="text-[10px] text-gray-600">Powered by ADYRON Local AI</p>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        lucide.createIcons();
+        <!-- Contact Modal (Brief Empresarial) -->
+        <div id="contactModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 sm:p-6">
+            <div class="absolute inset-0 bg-black/90 backdrop-blur-xl transition-opacity" onclick="closeContactModal()">
+            </div>
+            <div
+                class="relative w-full max-w-lg bg-[#0a0a0a] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] animate-modal-in">
+                <div class="p-6 border-b border-white/10 flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-white">Brief Empresarial</h3>
+                    <button onclick="closeContactModal()" aria-label="Cerrar modal"
+                        class="text-gray-400 hover:text-white transition-colors">
+                        <i data-lucide="x" class="w-6 h-6"></i>
+                    </button>
+                </div>
+                <div class="p-6 overflow-y-auto">
+                    <form id="briefForm" onsubmit="sendBriefToWhatsapp(event)" class="space-y-4">
+                        <div>
+                            <label for="briefName" class="block text-sm font-medium text-gray-400 mb-1">Nombre
+                                Completo</label>
+                            <input type="text" id="briefName" required
+                                class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="briefCompany" class="block text-sm font-medium text-gray-400 mb-1">Empresa /
+                                Marca</label>
+                            <input type="text" id="briefCompany" required
+                                class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                        </div>
+                        <div>
+                            <label for="briefService" class="block text-sm font-medium text-gray-400 mb-1">Servicio de
+                                Interés</label>
+                            <select id="briefService"
+                                class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors">
+                                <option value="Desarrollo Web" class="bg-black">Desarrollo Web</option>
+                                <option value="E-commerce" class="bg-black">E-commerce</option>
+                                <option value="Redes Sociales" class="bg-black">Redes Sociales</option>
+                                <option value="Branding" class="bg-black">Branding</option>
+                                <option value="Ads / Publicidad" class="bg-black">Ads / Publicidad</option>
+                                <option value="Otro" class="bg-black">Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="briefDetails" class="block text-sm font-medium text-gray-400 mb-1">Detalles del
+                                Proyecto</label>
+                            <textarea id="briefDetails" rows="3"
+                                class="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:border-brand-blue focus:outline-none transition-colors"
+                                placeholder="Cuéntanos brevemente qué necesitas..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i> ENVIAR A WHATSAPP
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-        document.getElementById('chatToggle').addEventListener('click', () => {
-            const chat = document.getElementById('chatBox');
-            if (!chat.classList.contains('hidden')) {
-                setTimeout(() => chat.classList.remove('translate-y-10', 'opacity-0'), 10);
-            } else {
-                chat.classList.add('translate-y-10', 'opacity-0');
-            }
-        });
-    </script>
-    <script src="js/chat-mantra.js?v=1.1"></script>
-    <script src="js/app.js?v=1.1"></script>
-    <script src="js/particles.js?v=1.1"></script>
-    <!-- Tailwind CSS -->
-    <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
-    <link href="css/styles.css" rel="stylesheet">
-    <script>
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            const answer = item.querySelector('.faq-answer-custom');
-            const isActive = item.classList.contains('active');
+        <script>
+            lucide.createIcons();
 
-            document.querySelectorAll('.faq-item-custom').forEach(i => {
-                if (i !== item) {
-                    i.classList.remove('active');
-                    i.querySelector('.faq-answer-custom').style.maxHeight = null;
+            document.getElementById('chatToggle').addEventListener('click', () => {
+                const chat = document.getElementById('chatBox');
+                if (!chat.classList.contains('hidden')) {
+                    setTimeout(() => chat.classList.remove('translate-y-10', 'opacity-0'), 10);
+                } else {
+                    chat.classList.add('translate-y-10', 'opacity-0');
                 }
             });
+        </script>
+        <script src="js/chat-mantra.js?v=1.1"></script>
+        <script src="js/app.js?v=1.1"></script>
+        <script src="js/particles.js?v=1.1"></script>
+        <!-- Tailwind CSS -->
+        <!-- <script src="https://cdn.tailwindcss.com"></script> REMOVED FOR PRODUCTION -->
+        <link href="css/styles.css" rel="stylesheet">
+        <script>
+            function toggleFaq(element) {
+                const item = element.parentElement;
+                const answer = item.querySelector('.faq-answer-custom');
+                const isActive = item.classList.contains('active');
 
-            if (!isActive) {
-                item.classList.add('active');
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            } else {
-                item.classList.remove('active');
-                answer.style.maxHeight = null;
+                document.querySelectorAll('.faq-item-custom').forEach(i => {
+                    if (i !== item) {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-answer-custom').style.maxHeight = null;
+                    }
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = null;
+                }
             }
-        }
-    </script>
-    <script>
-        function openContactModal() {
-            document.getElementById('contactModal').classList.remove('hidden');
-            document.getElementById('contactModal').classList.add('flex');
-        }
-        function closeContactModal() {
-            document.getElementById('contactModal').classList.add('hidden');
-            document.getElementById('contactModal').classList.remove('flex');
-        }
-        function sendBriefToWhatsapp(e) {
-            e.preventDefault();
-            const name = document.getElementById('briefName').value;
-            const company = document.getElementById('briefCompany').value;
-            const service = document.getElementById('briefService').value;
-            const details = document.getElementById('briefDetails').value;
+        </script>
+        <script>
+            function openContactModal() {
+                document.getElementById('contactModal').classList.remove('hidden');
+                document.getElementById('contactModal').classList.add('flex');
+            }
+            function closeContactModal() {
+                document.getElementById('contactModal').classList.add('hidden');
+                document.getElementById('contactModal').classList.remove('flex');
+            }
+            function sendBriefToWhatsapp(e) {
+                e.preventDefault();
+                const name = document.getElementById('briefName').value;
+                const company = document.getElementById('briefCompany').value;
+                const service = document.getElementById('briefService').value;
+                const details = document.getElementById('briefDetails').value;
 
-            const message = `Hola ADYRON, envío mi Brief Empresarial:%0A%0A` +
-                `👤 *Nombre:* ${name}%0A` +
-                `🏢 *Empresa:* ${company}%0A` +
-                `🚀 *Servicio:* ${service}%0A` +
-                `📝 *Detalles:* ${details}`;
+                const message = `Hola ADYRON, envío mi Brief Empresarial:%0A%0A` +
+                    `👤 *Nombre:* ${name}%0A` +
+                    `🏢 *Empresa:* ${company}%0A` +
+                    `🚀 *Servicio:* ${service}%0A` +
+                    `📝 *Detalles:* ${details}`;
 
-            window.open(`https://wa.me/593960761791?text=${message}`, '_blank');
-            closeContactModal();
-        }
-    </script>
+                window.open(`https://wa.me/593960761791?text=${message}`, '_blank');
+                closeContactModal();
+            }
+        </script>
 </body>
 
 </html>
